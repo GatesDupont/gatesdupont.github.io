@@ -8,7 +8,9 @@ layout: default
     <img src="{{ site.baseurl }}/images/utah.jpg">
 </div>
 <div class="col-12 col-sm-9">
+    <h2>Graduate studies</h2>
     <p>I'm an incoming MSc student at UMass Amherst with Dr. Chris Sutherland where I'll be working on optimal sampling design for spatial capture-recapture methods to estimate the range-wide density of Snow Leopards and Jaguars.</p>
+    <h2>Previous experience</h2>
     <p>I have experience applying a variety of analytical methods in my research, primarily in a frequentist framework and a working knowledge of Bayesian statistics, which I intend to develop more fully during my graduate studies. These methods include population trend modeling from count data, mark-recapture, population viability analysis, and species distribution modeling. I also have coursework experience with decision and risk analysis for wildlife management, including single and multiple objective optimizations, multiple criteria decision analysis, expected value of information and incorporation of uncertainty in decision models.</p>
 </div>
 </div>
