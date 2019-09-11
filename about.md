@@ -9,7 +9,7 @@ layout: default
 </div>
 <div class="col-12 col-sm-9">
     <h3>Graduate studies</h3>
-    <p>I'm an incoming MSc student at UMass Amherst with Dr. Chris Sutherland where I'll be working on optimal sampling design for spatial capture-recapture methods to estimate the range-wide density of Snow Leopards and Jaguars.</p>
+    <p>I'm an MSc student at UMass Amherst with Dr. Chris Sutherland where I'm be working on optimal sampling design for spatial capture-recapture methods to estimate the range-wide density of Snow Leopards and Jaguars. More gernerally, I’m interested in using and developing new ecological sampling and modeling methods to inform biodiversity conservation at broad spatial scales by leveraging the power of today’s tools, such as remote sensing and parallel computing.</p>
     <br>
     <h3>Technical skillset</h3>
     <p>I have experience applying a variety of analytical methods in my research, primarily in a frequentist framework and a working knowledge of Bayesian statistics, which I intend to develop more fully during my graduate studies. These methods include population trend modeling from count data, mark-recapture, population viability analysis, and species distribution modeling. I also have coursework experience with decision and risk analysis for wildlife management, including single and multiple objective optimizations, multiple criteria decision analysis, expected value of information and incorporation of uncertainty in decision models.</p>
