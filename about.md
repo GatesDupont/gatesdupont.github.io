@@ -39,6 +39,11 @@ layout: default
         </a>
       </div>
     <div class="col-2">
+        <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
+            <img src="{{ site.baseurl }}/images/collabs/panthera.png">
+        </a>
+      </div>
+    <div class="col-2">
         <a href = "https://dnr.cals.cornell.edu/" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/Cornell.png">
         </a>
@@ -51,11 +56,6 @@ layout: default
     <div class="col-2">
         <a href = "https://www.birds.cornell.edu/home/" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/CLO.png">
-        </a>
-      </div>
-    <div class="col-2">
-        <a href = "https://www.massaudubon.org/our-conservation-work/wildlife-research-conservation" target="_blank">
-            <img src="{{ site.baseurl }}/images/collabs/MassAudubon.png">
         </a>
       </div>
 </div>
