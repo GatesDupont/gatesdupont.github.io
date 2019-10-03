@@ -10,7 +10,7 @@ header_paths:
 - about.md
 - experience.md
 - projects.md
-- cv.md
+# - cv.md
 # - research.md
 
 ##### BUILD SETTINGS #####
