@@ -5,5 +5,7 @@ use_fontawesome: true
 ---
 
 <!-- CV -->
+<center>
+  <embed src="{{ site.baseurl }}/attachments/DupontCV.pdf#toolbar=1" width="800px" height="1035px"/>
+</center>
 
-<embed src="{{ site.baseurl }}/attachments/DupontCV.pdf" width="800px" height="2100px" />
