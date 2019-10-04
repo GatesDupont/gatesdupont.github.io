@@ -11,6 +11,8 @@ use_fontawesome: true
     </div>
 </div>
 
+<br>
+
 <!-- CV -->
 <div class="row content-row">
     <div style="text-align:center;" class="col-12 col-sm-8">
