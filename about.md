@@ -33,27 +33,27 @@ layout: default
             <img src="{{ site.baseurl }}/images/collabs/UMass.png">
         </a>
       </div>
-    <div class="col-2">
+    <div class="col-2 col-sm-4">
         <a href = "https://institute.sandiegozoo.org/population-sustainability" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/SDZ.png">
         </a>
       </div>
-    <div class="col-2">
+    <div class="col-2 col-sm-4">
         <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/panthera.png">
         </a>
       </div>
-    <div class="col-2">
+    <div class="col-2 col-sm-4">
         <a href = "https://dnr.cals.cornell.edu/" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/Cornell.png">
         </a>
       </div>
-    <div class="col-2">
+    <div class="col-2 col-sm-4">
         <a href = "https://www.mass.gov/orgs/division-of-fisheries-and-wildlife" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/MassWildlife.png">
         </a>
       </div>
-    <div class="col-2">
+    <div class="col-2 col-sm-4">
         <a href = "https://www.birds.cornell.edu/home/" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/CLO.png">
         </a>
