@@ -4,7 +4,7 @@ layout: default
 use_fontawesome: true
 ---
 
-# test swap sides
+# test hide cv
 <div class="container">
     <div class="row">
         <div class="hidden-md-down col-lg-6 col-xl-6" style="margin-bottom: 10%;">
