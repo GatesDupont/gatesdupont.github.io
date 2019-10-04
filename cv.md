@@ -10,6 +10,7 @@ use_fontawesome: true
     </div>
     <div style="text-align:center;" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <img src="{{ site.baseurl }}/images/alaska.png">
+    </div>
 </div>
 
 
