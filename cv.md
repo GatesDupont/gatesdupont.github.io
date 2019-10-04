@@ -3,7 +3,7 @@ title: Curriculum Vitae
 layout: default
 use_fontawesome: true
 ---
-# test 4
+
 <div class="container">
     <div class="row">
         <div class="d-none d-md-block col-md-7 col-lg-7 col-xl-7" style="margin-bottom: 10%;"> <!-- desktop: hide on screens smaller than md) -->
