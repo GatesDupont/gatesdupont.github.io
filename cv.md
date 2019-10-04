@@ -3,7 +3,7 @@ title: Curriculum Vitae
 layout: default
 use_fontawesome: true
 ---
-# test5
+# test7
 
 <div class="row content-row">
 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
