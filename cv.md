@@ -4,13 +4,11 @@ layout: default
 use_fontawesome: true
 ---
 
-# test 3 iframe
+# test 6 iframe
 <div class="container">
     <div class="row">
-        <div class="col-12 col-sm-0 col-md-6 col-lg-6 col-xl-6">
+        <div class="col-12 col-sm-0 col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 15px;">
             <img width="100%" height="100%" src="{{ site.baseurl }}/images/alaska.jpeg">
-        </div>
-        <div class="hidden-sm-up" style="min-height:25px;">
         </div>
         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
             <iframe src="https://docs.google.com/gview?url=gatesdupont.github.io/attachments/DupontCV.pdf&embedded=true" style="width:100%; height:100%;" frameborder="0">
