@@ -4,7 +4,7 @@ layout: default
 use_fontawesome: true
 ---
 
-# test 6 iframe
+# test 10%
 <div class="container">
     <div class="row">
         <div class="col-12 col-sm-0 col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 10%;">
