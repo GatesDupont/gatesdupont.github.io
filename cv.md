@@ -8,6 +8,6 @@ use_fontawesome: true
     <object width="100%" height="750vh" data="https://docs.google.com/gview?embedded=true&url=gatesdupont.github.io/attachments/DupontCV.pdf">
 </div>
 <div class="col-6">
-    <img width="100%" height="750vh" src="gatesdupont.github.io/images/alaska.jpeg">
+    <img src="gatesdupont.github.io/images/alaska.jpeg">
 </div>
 </div>
