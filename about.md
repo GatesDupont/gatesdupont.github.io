@@ -5,7 +5,7 @@ layout: default
 
 <div class="row content-row">
 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-    <img src="{{ site.baseurl }}/images/utah.jpg">
+    <img width="100%" height="70vh" src="{{ site.baseurl }}/images/utah.jpg">
 </div>
 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
     <h3>Graduate studies</h3>
@@ -17,7 +17,7 @@ layout: default
 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
     <a class="twitter-timeline" 
        data-width="100%" 
-       data-height="80vh" 
+       data-height="70vh" 
        data-theme="light" 
        data-link-color="#71b2c9"
        href="https://twitter.com/gatesdupont?ref_src=twsrc%5Etfw">Tweets by gatesdupont</a> 
