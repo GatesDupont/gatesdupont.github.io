@@ -13,6 +13,8 @@ use_fontawesome: true
     <div class="col-0 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
 </div>
 
+# Test 2
+
 <!-- CV -->
 <div class="row content-row">
     <div class="col-0 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
