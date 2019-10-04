@@ -4,7 +4,7 @@ layout: default
 use_fontawesome: true
 ---
 
-# test dynamic hiding with md
+# test make pdf viewer bigger
 <div class="container">
     <div class="row">
         <div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 10%;"> <!-- desktop: hide on screens smaller than md) -->
