@@ -8,6 +8,6 @@ use_fontawesome: true
     <object width="40%" height="750vh" data="https://docs.google.com/gview?embedded=true&url=gatesdupont.github.io/attachments/DupontCV.pdf">
 </div>
 <div class="col-6">
-    <img src="gatesdupont.github.io/images/alaska.jpeg">
+    <img src="{{ site.baseurl }}/images/alaska.jpeg">
 </div>
 </div>
