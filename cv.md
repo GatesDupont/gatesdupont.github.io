@@ -4,7 +4,7 @@ layout: default
 use_fontawesome: true
 ---
 
-# test d-none d-md-block but now even
+# test dynamic hiding
 <div class="container">
     <div class="row">
         <div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 10%;"> <!-- desktop: hide on screens smaller than md) -->
