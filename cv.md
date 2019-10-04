@@ -11,7 +11,7 @@ use_fontawesome: true
             </iframe>
         </div>
         <div class="d-md-none col-12 col-sm-12" style="margin-bottom: 10%;"> <!--  mobile: hide on screens larger than sm -->
-            <iframe src="https://docs.google.com/gview?url=gatesdupont.github.io/attachments/DupontCV.pdf&embedded=true" style="width:100%; height:100vh;" frameborder="0">
+            <iframe src="https://docs.google.com/gview?url=gatesdupont.github.io/attachments/DupontCV.pdf&embedded=true" style="width:100%; height:75vh;" frameborder="0">
             </iframe>
         </div>
         <div class="col-12 col-sm-0 col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 10%;">
