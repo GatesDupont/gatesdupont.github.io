@@ -7,7 +7,7 @@ use_fontawesome: true
 # test d-none d-md-block
 <div class="container">
     <div class="row">
-        <div class="d-none d-md-block" style="margin-bottom: 10%;">
+        <div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 10%;">
             <iframe src="https://docs.google.com/gview?url=gatesdupont.github.io/attachments/DupontCV.pdf&embedded=true" style="width:100%; height:100%;" frameborder="0">
             </iframe>
         </div>
