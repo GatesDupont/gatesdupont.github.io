@@ -6,7 +6,7 @@ use_fontawesome: true
 
 <div class="container">
     <div class="row">
-        <div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 10%;"> <!-- desktop: hide on screens smaller than md) -->
+        <div class="d-none d-md-block col-md-8 col-lg-8 col-xl-8" style="margin-bottom: 10%;"> <!-- desktop: hide on screens smaller than md) -->
             <iframe src="https://docs.google.com/gview?url=gatesdupont.github.io/attachments/DupontCV.pdf&embedded=true" style="width:100%; height:100%;" frameborder="0">
             </iframe>
         </div>
@@ -14,7 +14,7 @@ use_fontawesome: true
             <iframe src="https://docs.google.com/gview?url=gatesdupont.github.io/attachments/DupontCV.pdf&embedded=true" style="width:100%; height:75vh;" frameborder="0">
             </iframe>
         </div>
-        <div class="col-12 col-sm-0 col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 10%;">
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4" style="margin-bottom: 10%;">
             <img width="100%" height="100%" src="{{ site.baseurl }}/images/alaska.jpeg">
         </div>
     </div>
