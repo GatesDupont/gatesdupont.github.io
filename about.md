@@ -17,7 +17,7 @@ layout: default
 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
     <a class="twitter-timeline" 
        data-width="100%" 
-       data-height="500vw" 
+       data-height="80vw" 
        data-theme="light" 
        data-link-color="#71b2c9"
        href="https://twitter.com/gatesdupont?ref_src=twsrc%5Etfw">Tweets by gatesdupont</a> 
