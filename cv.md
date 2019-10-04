@@ -3,7 +3,7 @@ title: Curriculum Vitae
 layout: default
 use_fontawesome: true
 ---
-# test2
+# test3
 
 <div class="row content-row">
 <div class="col-6">
@@ -11,5 +11,15 @@ use_fontawesome: true
 </div>
 <div class="col-6">
     <object width="100%" height="100%" data="https://docs.google.com/gview?embedded=true&url=gatesdupont.github.io/attachments/DupontCV.pdf">
-</div
+</div>
+</div>
+    
+
+<div class="row content-row">
+<div class="col-6">
+    <object width="100%" height="100%" data="https://docs.google.com/gview?embedded=true&url=gatesdupont.github.io/attachments/DupontCV.pdf">
+</div>
+<div class="col-6">
+    <img width="100%" height="100%" src="{{ site.baseurl }}/images/alaska.jpeg">
+</div>
 </div>
