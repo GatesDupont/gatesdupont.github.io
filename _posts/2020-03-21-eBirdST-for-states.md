@@ -61,24 +61,107 @@ Text
 
 <br>
 
-### Title
+### Abundance
 
 Text
 
 ```r
-test = c(1,2,3,4)
+"ABUNDANCE"
+
+# load trimmed mean abundances
+abunds <- load_raster("abundance_umean", path = sp_path)
+```
+
+```r
+# Cropping to an area rougly the size of MA
+# (Week 23 = June 6-12)
+abunds_23_cr =  crop(
+  abunds[[23]], 
+  extent(c(-6.2e6, -5.6e6,  4.5e6, 4.85e6)))
+```
+
+```r
+# define mollweide projection
+mollweide <- "+proj=moll +lon_0=-90 +x_0=0 +y_0=0 +ellps=WGS84"
+```
+
+```r
+# project single layer from stack to mollweide
+week23_moll <- projectRaster(
+  abunds_23_cr, 
+  crs = mollweide, method = "ngb")
+```
+
+```r
+# Mask to MA and crop
+ma_moll = spTransform(ma, mollweide)
+r = mask(week23_moll, ma_moll) %>%
+  crop(., ma_moll) %>%
+  projectRaster(., crs = crs(ma), method = "ngb")
 ```
 
 Text
 
 <br>
 
-### Title
+### Variable importance
 
 Text
 
 ```r
-test = c(1:4)
+"VARIABLE IMPORTANCE"
+
+# Load predictor importance
+pis = load_pis(sp_path)
+```
+
+```r
+# Select region and season
+lp_extent <- ebirdst_extent(
+  st_as_sf(ma), 
+  t = c("2016-06-06", "2016-06-12")) # Models assumed 2016
+```
+
+```r
+# Plot centroids and extent of analysis
+par(mfrow = c(1, 1), mar = c(0, 0, 0, 6))
+calc_effective_extent(sp_path, ext = lp_extent)
+```
+
+Text
+
+<br>
+
+### Final plot
+
+Text
+
+```r
+"FINAL PLOT"
+
+# Convert raster to data frame for ggplot
+r_spdf <- as(r, "SpatialPixelsDataFrame")
+r_df <- as.data.frame(r_spdf)
+colnames(r_df) <- c("value", "x", "y")
+```
+
+```r
+# RELATIVE ABUNDANCE
+ggplot() +
+  geom_raster(data = r_df , aes(x = x, y = y, fill = value)) + 
+  scale_fill_gradientn(colors = abundance_palette(10, season = "breeding")) +
+  coord_quickmap() +
+  theme_bw() +
+  theme(legend.position = "right") +
+  labs(title = "Eastern Meadowlark",
+       subtitle = "Relative Abundance, June 6-12",
+       caption = "Data source: eBird Status and Trends",
+       fill = "RA", y = "Latitude", x = "Longitude")
+```
+
+```r
+# VARIABLE IMPORTANCE
+plot_pis(pis, ext = lp_extent, by_cover_class = TRUE, n_top_pred = 15)
 ```
 
 Text
