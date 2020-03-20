@@ -1,5 +1,5 @@
 ---
-title: "User Guide to eBird Status & Trends for State Managers"
+title: "State Manager's Guide to eBird Status & Trend "
 layout: post
 published: true
 use_code: true
