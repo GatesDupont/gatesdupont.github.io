@@ -159,10 +159,25 @@ ggplot() +
        fill = "RA", y = "Latitude", x = "Longitude")
 ```
 
+<center>
+  <figure>
+    <img src="{{ site.baseurl }}/images/eame_map.png" style="width:800px;">
+    <figcaption>Fig. 1: Text needed here.</figcaption>
+  </figure>
+</center>
+
 ```r
 # VARIABLE IMPORTANCE
 plot_pis(pis, ext = lp_extent, by_cover_class = TRUE, n_top_pred = 15)
 ```
+
+<center>
+  <figure>
+    <img src="{{ site.baseurl }}/images/eame_pi.png" style="width:800px;">
+    <figcaption>Fig. 2: Text needed here.</figcaption>
+  </figure>
+</center>
+
 
 Text
 
