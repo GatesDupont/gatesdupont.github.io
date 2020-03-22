@@ -186,6 +186,10 @@ h1.section-title {
   margin: 1em 0em 0.7em;
 }
 
+h3.section-title {
+  color: #033658;
+}
+
 code {
   padding: 2px 4px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
