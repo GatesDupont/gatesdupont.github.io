@@ -37,6 +37,11 @@ a, a:active {
   color: #881c1c !important; /* Cardinal Red */
 }
 
+/* primary color */
+.colorA0 {
+  color: #25221e !important;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;
