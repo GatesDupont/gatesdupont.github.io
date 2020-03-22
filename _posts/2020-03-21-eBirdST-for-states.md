@@ -130,7 +130,7 @@ calc_effective_extent(sp_path, ext = lp_extent)
 
 <center>
   <figure>
-    <img src="{{ site.baseurl }}/images/eame_EffExt.png" style="width:800px;">
+    <img src="{{ site.baseurl }}/images/eame_pipts.png" style="width:800px;">
     <figcaption>Fig. 1: Text needed here.</figcaption>
   </figure>
 </center>
