@@ -42,6 +42,10 @@ a, a:active {
   color: #15202B !important;
 }
 
+.colorA1{
+  color: #003658 !important;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -75,7 +79,7 @@ a.nav-link:active {
 }
 
 .header-page {
-  background-color: #881c1c; /* VAR: $header-bg-color */
+  background-color: #15202B; /* VAR: $header-bg-color */
   background-image: linear-gradient(120deg, #15202B, #15202B, #71b2c9); /* VARS: $header-bg-color, $header-bg-color-secondar */
   padding: 1.25em 0; /* padding for top and bottom only */
 }
@@ -174,7 +178,7 @@ ul.contact {
 }
 
 h1.section-title {
-  color: #15202B; /* Cardinal Red */
+  color: #003658;
   margin: 1em 0em 0.7em;
 }
 
