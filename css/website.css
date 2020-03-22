@@ -46,6 +46,10 @@ a, a:active {
   color: #003658 !important;
 }
 
+/colorB1{
+  color: #E73658 !important;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -178,7 +182,7 @@ ul.contact {
 }
 
 h1.section-title {
-  color: #003658;
+  color: #E73658;
   margin: 1em 0em 0.7em;
 }
 
