@@ -4,13 +4,17 @@ layout: post
 published: true
 use_code: true
 ---
-<i>A quick-start guide to accessing and analyzing eBird Status & Trends data at the state level.</i>
+<i>A quick-start guide to accessing eBird Status & Trends data and analyzing it at the state level.</i>
 
 <br>
 
 ## <span style="color:#881c1c">Introduction</span>
 ---
-Understanding species distributions is one of the most important aspects of ecology. Improving this knowldege is critical for local and state agencies to inform decision making and management, especially for species of conservation concern.
+
+The spatial distributiuon of a species is one the most fundamental components of its ecology. This knowledge is critical for local and state managers to inform resource management, especially for those efforts related to species of conservation concern. Despite this importance, obtaining a reliable and quantitivative description of species distributions can be extremely challenging, or at least expensive. However, with the rise of citizen science programs such as iNaturalist and eBird, researchers have effectively crowd-sourced the data-collection process, creating a data deluge in a field that had long been data-depirved. 
+
+Not all data is created equally, though, which has lead rapid methodological advancements. Some examples of this would be extracting only "semi-structured" survey data from the primary database, or methods to deal with overdispersion due to an abundance of assumed negative reports.
+
 <br>
 
 ## <span style="color:#881c1c">Methods</span>
