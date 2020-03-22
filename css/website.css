@@ -39,7 +39,7 @@ a, a:active {
 
 /* primary color */
 .colorA0 {
-  color: #25221e !important;
+  color: #15202B !important;
 }
 
 img {
@@ -76,7 +76,7 @@ a.nav-link:active {
 
 .header-page {
   background-color: #881c1c; /* VAR: $header-bg-color */
-  background-image: linear-gradient(120deg, #25221e, #25221e, #71b2c9); /* VARS: $header-bg-color, $header-bg-color-secondar */
+  background-image: linear-gradient(120deg, #15202B, #15202B, #71b2c9); /* VARS: $header-bg-color, $header-bg-color-secondar */
   padding: 1.25em 0; /* padding for top and bottom only */
 }
 
@@ -174,7 +174,7 @@ ul.contact {
 }
 
 h1.section-title {
-  color: #881c1c; /* Cardinal Red */
+  color: #15202B; /* Cardinal Red */
   margin: 1em 0em 0.7em;
 }
 
