@@ -1,5 +1,5 @@
 ---
-title: "State Manager's Guide to eBird Status & Trend "
+title: "State Manager's Guide to eBird Status & Trends"
 layout: post
 published: true
 use_code: true
@@ -128,6 +128,25 @@ par(mfrow = c(1, 1), mar = c(0, 0, 0, 6))
 calc_effective_extent(sp_path, ext = lp_extent)
 ```
 
+<center>
+  <figure>
+    <img src="{{ site.baseurl }}/images/eame_EffExt.png" style="width:800px;">
+    <figcaption>Fig. 1: Text needed here.</figcaption>
+  </figure>
+</center>
+
+
+```r
+plot_pis(pis, ext = lp_extent, by_cover_class = TRUE, n_top_pred = 15)
+```
+
+<center>
+  <figure>
+    <img src="{{ site.baseurl }}/images/eame_pi.png" style="width:800px;">
+    <figcaption>Fig. 2: Text needed here.</figcaption>
+  </figure>
+</center>
+
 Text
 
 <br>
@@ -162,22 +181,9 @@ ggplot() +
 <center>
   <figure>
     <img src="{{ site.baseurl }}/images/eame_map.png" style="width:800px;">
-    <figcaption>Fig. 1: Text needed here.</figcaption>
+    <figcaption>Fig. 3: Text needed here.</figcaption>
   </figure>
 </center>
-
-```r
-# VARIABLE IMPORTANCE
-plot_pis(pis, ext = lp_extent, by_cover_class = TRUE, n_top_pred = 15)
-```
-
-<center>
-  <figure>
-    <img src="{{ site.baseurl }}/images/eame_pi.png" style="width:800px;">
-    <figcaption>Fig. 2: Text needed here.</figcaption>
-  </figure>
-</center>
-
 
 Text
 
