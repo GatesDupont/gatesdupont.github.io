@@ -9,8 +9,12 @@ use_code: true
 
 <br>
 
+## Introduction
 
 This is a quick post to introduce a few useful tips and tricks that are readily available in R to efficiently produce a state-level visualization of reported testing data. The end-goal here, as you can see in Figure 1, is a geo-facetted map showing the cumulative daily total number of tests administered by state. To make it more intuitive, that number is scaled to the number of tests per thousand people. 
+
+
+## Setup
 
 We will start out by getting the packages we need. As usual, we will rely on [`dplyr`](https://dplyr.tidyverse.org/) for efficient data manipulation, and [`ggplot2`](https://ggplot2.tidyverse.org/reference/ggtheme.html) and its extension, [`ggpubr`](https://rpkgs.datanovia.com/ggpubr/), to make plotting a bit easier and more aesthetically pleasing. [`RCurl`](https://www.rdocumentation.org/packages/RCurl/versions/1.98-1.1) is a package that will help us scrape [api data](https://covidtracking.com/api/) of US state testing from [The COVID Tracking Project](https://covidtracking.com/), which we can then compare to data of 2015 state population sizes readily available from the [`usmap`](https://www.rdocumentation.org/packages/usmap/versions/0.5.0/topics/usmap) package. Finally, we'll put this all together into a nice factted plot where each facet represents a state, using the package [`geofacet`](https://hafen.github.io/geofacet/). If you are missing any of these packages, they are all available for download from CRAN, so you can use: `install.packages("dplyr")`, for example.
 
@@ -22,6 +26,9 @@ library(RCurl)
 library(usmap)
 library(geofacet)
 ```
+
+
+## Accessing the data
 
 The state population data from the `usmap` package can be accessed using the `data()` command and stored under its object name, `statepop`. This is a dataframe of a few variables, which we will later merge with the COVID-19 data.
 
@@ -40,6 +47,9 @@ covid19 <- read.csv(text = download)
 ```
 
 The COVID-19 data has several fields for each state on each day, including the number of positive, negative, and pending test results, as well as the total number of administered tests and number of reported COVID-19 deaths. 
+
+
+## Basic data maniuplation
 
 Now that we have our two primary datasets, we need to merge them into a single dataframe, which we can do using the `merge.data.frame()` function. This is an immensley useful function, and is essential R's version of Excel's `VLOOKUP()` function. After that, we can make the number of tests more comparable across states by adjusting for population size. To do so, we calculate tests per capita (assuming similar population sizes to 2015), but this results in a decimal that isn't immediately recognizeable or intutive, so we multiply this by 1000 to get the number of tests per 1000 individuals. 
 
@@ -66,6 +76,8 @@ df = df %>%
   ungroup()
 ```
 
+## Final plot
+
 Now we can plot our data! Some key tips and tricks in here: 1) `viridis` is a great and popular color palette, especially as it's colorblind-friendly, with a range from yellow to dark purple. We can implement it here using `scale_color_viridis_c`, where the `_c` at the end stands for "continuous", as opposed to `_d` for "discrete." If we're interesed in drawing attention to the states with more testing, we'll want those to be dark since yellow doesn't stand out well against a white background, so we can reverse the direction of the color gradient using `direction = -1`. This creates a pretty stark difference among the states, though, so applying a log transformation using `trans = "log"` smooths it out a bit. There are a few other customizations in here, but nothing particularly noteworthy. Finally, we can use the `facet_geo()` function to facet the lines into states, with facets organized in a geographic manner. This results in a nice, readible figure that's easy to interpret even with a fairly quick glance.
 
 ```r
@@ -90,4 +102,3 @@ ggplot(data = df, aes(x = date, y = perthousand)) +
     <figcaption>Fig. 1: Geo-facet plot showing the cumulative number of tests by state for COVID-19, scaled to number of tests for every 1000 residents.</figcaption>
   </figure>
 </center>
-
