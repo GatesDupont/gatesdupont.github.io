@@ -21,7 +21,7 @@ The eBird science team has a great reputation of creating user-friendly and thor
 
 This was brought to my attention recently when some friends at [Mass Audubon](https://www.massaudubon.org/)'s [Conservation Science Team](https://www.massaudubon.org/our-conservation-work) asked for my assistance in generating a species distribution model for [Eastern Meadowlark](https://www.massaudubon.org/our-conservation-work/wildlife-research-conservation/grassland-birds/eastern-meadowlark) in the state. This species is in serious decline in Massachusetts, likely due to agircultural practices such as intensive mowing that are degrading and depleting their grassland habitat. For the past few years, Mass Audubon has been conducting [targeted, citizen science surveys for the species](https://www.massaudubon.org/our-conservation-work/wildlife-research-conservation/grassland-birds/eastern-meadowlark-survey). With lots of area to cover, the agency is now looking to use a data-driven process to focus their efforts more specifically on areas where they're likely to find meadowlarks, with the possibility of finding new breeding pairs. 
 
-Luckily, eBird has already completed [their analysis for Eastern Meadowlark](https://ebird.org/science/status-and-trends/easmea), which makes it a great fit for this initiative. The rest of this post is a quick-start guide to accessing this data and analyzing it at the state level.
+Luckily, eBird has already completed most of [their analysis for Eastern Meadowlark](https://ebird.org/science/status-and-trends/easmea), which makes it a great fit for this initiative. The rest of this post is a quick-start guide to accessing this data and analyzing it at the state level.
 
 <br>
 
@@ -29,13 +29,14 @@ Luckily, eBird has already completed [their analysis for Eastern Meadowlark](htt
 ---
 ### Setup
 
-Text about setup
-
-The packages we'll need:
+First, start by downloading and installing the ebirdst package. If you are missing any of the other packages, you can also download them using this command.
 
 ```r
 install.packages("ebirdst")
 ```
+
+We will need the following set of packages for this brief analysis. The raster package is the standard choice to work with raster data, which is a matrix-style datatype that is geo-referenced. For accessing some additional spatial data, we will use rnaturalearth, which we can then manipulate using the sf package. The ggplot2 package (and its extensions, including vridisLite and ggpubr) provides a simple yet sophisticated plot framework within the tidyverse, along with dplyr which is used for efficient data manipulation.
+
 ```r
 library(ebirdst)
 library(raster)
@@ -48,7 +49,7 @@ library(dplyr)
 # handle namespace conflicts
 extract <- raster::extract
 ```
-Next, we'll need a polygon of the state.
+Before jumping into the analysis, we need to make sure we have a polygon of the state we are interested in, which here is Massachusetts. There are many ways to get this polygon, but this is one of the most straightforward methods I have come across.
 
 ```r
 "STATE DATA"
@@ -60,12 +61,12 @@ us <- getData("GADM", country="USA", level=1)
 ma = us[match(toupper("Massachusetts"),toupper(us$NAME_1)),]
 ```
 
-We'll need to download the eBird data in this species format. This requires GB of space and takes time to download. Go get a coffee!
+Now to the eBird data! To find the six-letter species code, it's easiest to search for the species on eBird using [Explore Species](https://ebird.org/explore) and then taking the code from the URL. For example, the URL for Eastern Meadowlark is: [https://ebird.org/species/**easmea**](https://ebird.org/species/easmea), and we can use that. Make sure `tifs_only` is set to `FALSE` if you want to include variable importance in your analysis. Depending on the species, the resulting file can be quite large and can take a while to download. Go get a coffee while you wait!
 
 ```r
 "GETTING EBIRD DATA"
 
-# Download data (this takes time (~20 mins for me), and space)
+# Download data (this takes time, ~20 mins for me)
 sp_path <- ebirdst_download(species =  "easmea", tifs_only = FALSE)
 ```
 
