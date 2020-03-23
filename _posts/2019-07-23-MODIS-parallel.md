@@ -28,7 +28,9 @@ if (!dir.exists(sdm_dir)) {
   dir.create(sdm_dir)
 }
 setwd(sdm_dir)
+```
 
+```r
 
 #----Read in manually-selected tiles----
 
@@ -38,8 +40,9 @@ setwd(sdm_dir)
 tiles = read.csv("data/GIS/modis/MODIS_tiles.csv")
 tilesH = tiles$H
 tilesV = tiles$V
+```
 
-
+```r
 #----Loop through tiles and download----
 
 # making parallel cluster
@@ -72,8 +75,9 @@ foreach(i = 1:42,
   file.rename(tifs, new_names)
 }
 stopCluster(cl)
+```
 
-
+```r
 #---Re-run to mosaic tiles by year----
 
 # FIRST, COPY THE MODIS TILES FROM THEIR ORIGINAL ARC PATH
@@ -102,7 +106,9 @@ tifs = runGdal(
 # "Local structure is up-to-date. Using offline information!"
 # This tells you that runGdal has all the hdf files and will
 # just start mosaicing them and converting to tifs.
+```
 
+```r
 # rename tifs by year
 new_names = format(as.Date(names(tifs)), "%Y") %>% 
   sprintf("modis_mcd12q1_umd_%s.tif", .) %>% 
