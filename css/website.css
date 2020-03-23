@@ -171,6 +171,10 @@ ul.contact {
 /*******************
  * GENERAL
  ******************/
+figure {
+  font-size: smaller;
+}
+
 .main-content {
   word-wrap: break-word;
 }
