@@ -99,6 +99,8 @@ ggplot(data = df, aes(x = date, y = perthousand)) +
 <center>
   <figure>
     <img src="{{ site.baseurl }}/images/covid_testing.jpg" style="width:800px;">
-    <figcaption>Fig. 1: Geo-facet plot showing the cumulative number of tests by state for COVID-19, scaled to number of tests for every 1000 residents.</figcaption>
+    <figcaption>Fig. 1: Geo-facet plot showing the cumulative number of tests by state for COVID-19, scaled to number of tests for every 1000 residents. Created on date of posting: March 23, 2020, not regularly updated. </figcaption>
   </figure>
 </center>
+
+Looks good!
