@@ -70,7 +70,7 @@ Now to the eBird data! To find the six-letter species code, it's easiest to sear
 sp_path <- ebirdst_download(species =  "easmea", tifs_only = FALSE)
 ```
 
-Text
+Now that we have all of this data downloaded and in our workspace, we can move on to analyzing it.
 
 <br>
 
