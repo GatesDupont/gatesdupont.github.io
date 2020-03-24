@@ -30,12 +30,12 @@ library(sf)
 Jumping into things, we need to get a polygon for Massachusetts, which we can do via the `rnaturalearth` package. Conveniently, this comes pre-packaged as an sf object, which means we can easily transform its CRS without having to convert the object class. Since we're dealing with proportional landcover, it's very important that we use an equal-area projection to maintain comparable buffers around each extraction location. Here we use the Albers Equal Area projection, specified to match the CRS for the nlcd data. For reproducibility, we then sample 10 arbitrary locations from wihtin this polygon to represent the points we intend to use for raster extraction.
 
 ```r
-state = ne_states(iso_a2 = "US", returnclass = "sf") %>%  # pull admin. bounds. for US
-  filter(iso_3166_2 == "US-MA") %>% # select Massachusetts
+state = ne_states(iso_a2 = "US", returnclass = "sf") %>%    # pull admin. bounds. for US
+  filter(iso_3166_2 == "US-MA") %>%                         # select Massachusetts
   st_transform(crs = "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80
 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs") # nlcd crs
 
-pts = st_sample(state, size = 10, type = "regular") # sample 10 points in polygon
+pts = st_sample(state, size = 10, type = "regular")         # sample 10 points in polygon
 
 # Plot!
 plot(st_transform(pts, 4326), col="red", pch=20)
@@ -91,13 +91,13 @@ However, in more complicated analyses with more points and larger areas (read: m
 library(velox)
 library(sp)
 
-nlcd.vx = velox(stack(nlcd))                                 # raster for velox
-sp.buff = gBuffer(as(pts, 'Spatial'), width=1000, byid=TRUE) # spatial buffer, radius in meters
+nlcd.vx = velox(stack(nlcd))                                  # raster for velox
+sp.buff = gBuffer(as(pts, 'Spatial'), width=1000, byid=TRUE)  # spatial buffer, radius in meters
 buff.df = SpatialPolygonsDataFrame(
             sp.buff,                                         
-            data.frame(id=1:length(sp.buff)),                # set ids
-            FALSE)                                           # df of buffers
-ex.mat.vx = nlcd.vx$extract(buff.df, df=T)                   # extract buffers from velox raster
+            data.frame(id=1:length(sp.buff)),                 # set ids
+            FALSE)                                            # df of buffers
+ex.mat.vx = nlcd.vx$extract(buff.df, df=T)                    # extract buffers from velox raster
 rm(nlcd.vx) # removing the velox raster can free up space
 ```
 
@@ -123,15 +123,15 @@ prop.lc = ex.mat.vx %>%
 Finally, for convenience, we can map the landscape class numbers back to their original names. This part is a bit in-the-weeds, but it makes any following analyses far easier. In the code below, we pull a hash table form the `nlcd` object and then use `merge.data.frame()` to match values from the hash table to the dataframe containing the pland values. `merge.data.frame()` is an extremely useful function, similar to `VLOOKUP` in Excel, amd has been designed for exactly this purpose of mapping values from one dataframe to another,
 
 ```r
-nlcd_cover_df = as.data.frame(nlcd@data@attributes[[1]]) %>% # reference the name attributes
-  subset(NLCD.2011.Land.Cover.Class != "") %>% # only those that are named
-  dplyr::select(ID, NLCD.2011.Land.Cover.Class) # keep only the ID and the lc class name
-lc.col.nms = data.frame(ID = as.numeric(colnames(prop.lc[-1]))) # select landcover classes
-matcher = merge.data.frame(x = lc.col.nms,
+nlcd_cover_df = as.data.frame(nlcd@data@attributes[[1]]) %>%      # reference the name attributes
+  subset(NLCD.2011.Land.Cover.Class != "") %>%                    # only those that are named
+  dplyr::select(ID, NLCD.2011.Land.Cover.Class)                   # keep only the ID and the lc class name
+lc.col.nms = data.frame(ID = as.numeric(colnames(prop.lc[-1])))   # select landcover classes
+matcher = merge.data.frame(x = lc.col.nms,                        # analogous to VLOOKUP in Excel
                            y = nlcd_cover_df,
                            by.x = "ID",
-                           all.x = T) # analogous to VLOOKUP in Excel
-colnames(prop.lc) = c("ID", as.character(matcher[,2])) # assign new names
+                           all.x = T)               
+colnames(prop.lc) = c("ID", as.character(matcher[,2]))            # assign new names
 ```
 
 ## <span style="color:#881c1c">Results</span>
