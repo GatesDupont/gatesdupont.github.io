@@ -31,7 +31,6 @@ setwd(sdm_dir)
 ```
 
 ```r
-
 #----Read in manually-selected tiles----
 
 # could instead use MODIS::getTiles() 
