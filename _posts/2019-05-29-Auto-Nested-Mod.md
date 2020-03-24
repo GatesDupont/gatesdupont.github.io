@@ -1,5 +1,5 @@
 ---
-title: "Automatically Generating Two-Stage Nested Models"
+title: "Automatically generating nested hierarchical models"
 layout: post
 published: true
 use_code: true
