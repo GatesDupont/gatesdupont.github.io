@@ -160,6 +160,8 @@ print(prop.lc)
 #   Wetlands` <dbl>, `Emergent Herbaceuous Wetlands` <dbl>
 ```
 
+I hope this has been tutorial has provided a convenient and straightforward demonstration of how `velox` can fit into your workflow!
+
 <br>
 
 ## <span style="color:#881c1c">References</span>
