@@ -1,5 +1,5 @@
 ---
-title: "Fast workflow for calculating proportional landcover"
+title: "Fast workflow to calculate proportional landcover"
 layout: post
 published: true
 use_code: true
