@@ -1,10 +1,10 @@
 ---
-title: "Calculating 'pland' using Velox & Dplyr"
+title: "Efficient workflow for calculating proportional landcover"
 layout: post
 published: true
 use_code: true
 ---
-<i>Efficiently calculating proportional landcover in R using velox and dplyr.</i>
+<i>Using velox and dplyr to efficiently calculate proportional landcover ('pland') in R </i>
 
 <br>
 
