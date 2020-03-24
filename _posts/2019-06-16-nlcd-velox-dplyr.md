@@ -75,6 +75,8 @@ plot(pts, col="black", pch=20, cex=1.5, add=T)
 
 ### Extract using raster::extract()
 
+Most of us first learn how to do these calculations within the `raster` package, which we'll go through here first for comparison to the same process in `velox`. In `raster`, this is a very simple operation, where we pass the raster and the points the `extract()` function, along with a specification for the buffer in meters (1000 m = 1 km). We also specify `df = TRUE`, so that the output data is a dataframe instead of a list object. This is convenient and straightforward, and works very well for this example, but it is computationally intensive and can be nearly intractable for very large rasters.
+
 ```r
 library(raster)
 
@@ -83,34 +85,42 @@ ex.mat.r = extract(nlcd, as(pts, 'Spatial'), buffer=1000, df=T) # raster extract
 
 ### Extract using velox
 
+However, in more complicated analyses with more points and larger areas (read: more pixels), this is where the `velox` method really shines. First, we convert the raster to a velox object, and then we generate the point-specific buffers and convert them to a spatial polygons data frame, making sure that they all have IDs. At this point, we can now extract pixels within thhe buffers from the raster. This results in a dataframe just like the output from the extract function.
+
 ```r
 library(velox)
 library(sp)
 
-nlcd.vx = velox(stack(nlcd)) # raster for velox
+nlcd.vx = velox(stack(nlcd))                                 # raster for velox
 sp.buff = gBuffer(as(pts, 'Spatial'), width=1000, byid=TRUE) # spatial buffer, radius in meters
-buff.df = SpatialPolygonsDataFrame(sp.buff,
-                                   data.frame(id=1:length(sp.buff)), # set ids
-                                   FALSE) # df of buffers
-ex.mat.vx = nlcd.vx$extract(buff.df, df=T) # extract buffers from velox raster
-rm(nlcd.vx) # free up space
+buff.df = SpatialPolygonsDataFrame(
+            sp.buff,                                         
+            data.frame(id=1:length(sp.buff)),                # set ids
+            FALSE)                                           # df of buffers
+ex.mat.vx = nlcd.vx$extract(buff.df, df=T)                   # extract buffers from velox raster
+rm(nlcd.vx) # removing the velox raster can free up space
 ```
 
 ### Calculate pland
 
+No matter which method you choose, dplyr is a great choice for carrying out the pland calculations, which you can see below. Compared to what would otherwise be a mess of nested `for` and `if` loops, this workflow is far more streamlined and easier to follow, and takes much less time.
+
 ```r
 prop.lc = ex.mat.vx %>%
-  setNames(c("ID", "lc_type")) %>% # rename for ease
-  group_by(ID, lc_type) %>% # group by point (ID) and lc class 
-  summarise(n = n()) %>% # count the number of occurences of each class
-  mutate(pland = n / sum(n)) %>% # calculate percentage
-  ungroup() %>%
-  dplyr::select(ID, lc_type, pland) %>% # keep only these vars
-  complete(ID, nesting(lc_type), fill = list(pland = 0)) %>% # Fill in implicit landcover 0s
-  spread(lc_type, pland) # convert to long format
+  setNames(c("ID", "lc_type")) %>%        # rename for ease
+  group_by(ID, lc_type) %>%               # group by point (ID) and lc class 
+  summarise(n = n()) %>%                  # count the number of occurences of each class
+  mutate(pland = n / sum(n)) %>%          # calculate percentage
+  ungroup() %>%                           # convert back to original form
+  dplyr::select(ID, lc_type, pland) %>%   # keep only these vars
+  complete(ID, nesting(lc_type), 
+  fill = list(pland = 0)) %>%             # fill in implicit landcover 0s
+  spread(lc_type, pland)                  # convert to long format
 ```
 
 ### Assign landcover class names
+
+Finally, for convenience, we can map the landscape class numbers back to their original names. This part is a bit in-the-weeds, but it makes any following analyses far easier. In the code below, we pull a hash table form the `nlcd` object and then use `merge.data.frame()` to match values from the hash table to the dataframe containing the pland values. `merge.data.frame()` is an extremely useful function, similar to `VLOOKUP` in Excel, amd has been designed for exactly this purpose of mapping values from one dataframe to another,
 
 ```r
 nlcd_cover_df = as.data.frame(nlcd@data@attributes[[1]]) %>% # reference the name attributes
@@ -126,6 +136,8 @@ colnames(prop.lc) = c("ID", as.character(matcher[,2])) # assign new names
 
 ## <span style="color:#881c1c">Results</span>
 ---
+
+This looks great. For a quick checking, summing the values for each row across the columns should add up to 1, which looks right from a quick check!
 
 ```r
 print(prop.lc)
