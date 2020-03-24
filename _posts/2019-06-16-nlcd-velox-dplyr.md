@@ -18,10 +18,18 @@ Now that R is so popular, FRAGSTATS has faded out a bit and has been all but rep
 ---
 ### Generating sample coordinates
 
+
+To start, we'll load the packages the following pacakges for use throughout the walkthrough. 
+
 ```r
 library(dplyr)
 library(rnaturalearth)
 library(sf)
+```
+
+Jumping into things, we need to get a polygon for Massachusetts, which we can do via the `rnaturalearth` package. Conveniently, this comes pre-packaged as an sf object, which means we can easily transform its CRS without having to convert the object class. Since we're dealing with proportional landcover, it's very important that we use an equal-area projection to maintain comparable buffers around each extraction location. Here we use the Albers Equal Area projection, specified to match the CRS for the nlcd data. For reproducibility, we then sample 10 arbitrary locations from wihtin this polygon to represent the points we intend to use for raster extraction.
+
+```r
 state = ne_states(iso_a2 = "US", returnclass = "sf") %>%  # pull admin. bounds. for US
   filter(iso_3166_2 == "US-MA") %>% # select Massachusetts
   st_transform(crs = "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80
@@ -87,8 +95,6 @@ rm(nlcd.vx) # free up space
 ### Calculate pland
 
 ```r
-library(dplyr)
-
 prop.lc = ex.mat.vx %>%
   setNames(c("ID", "lc_type")) %>% # rename for ease
   group_by(ID, lc_type) %>% # group by point (ID) and lc class 
