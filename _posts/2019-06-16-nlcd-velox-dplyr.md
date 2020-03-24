@@ -167,5 +167,3 @@ I hope this has been tutorial has provided a convenient and straightforward demo
 ## <span style="color:#881c1c">References</span>
 ---
 1. McGarigal, K. andBJ Marks. 1994. FRAGSTATS v2: Spatial Pattern Analysis Program for Categorical and Continuous Maps. Computer software program produced by the authors at the University of Massachusetts, Amherst. Available at the following web site: http://www.umass.edu/landeco/research/fragstats/fragstats.html
-
-2. Johnston, A. et al. Best practices for making reliable inferences from citizen science data: case study using eBird to estimate species distributions. bioRxiv (2019). doi:10.1101/574392
