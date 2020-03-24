@@ -37,6 +37,7 @@ state = ne_states(iso_a2 = "US", returnclass = "sf") %>%  # pull admin. bounds. 
 
 pts = st_sample(state, size = 10, type = "regular") # sample 10 points in polygon
 
+# Plot!
 plot(st_transform(pts, 4326), col="red", pch=20)
 maps::map("state", add=T)
 ```
@@ -49,16 +50,19 @@ maps::map("state", add=T)
 
 ### Fetching NLCD data
 
+Next we need to get the NLCD data. Luckily, this doesn't involve any manual downloads or organizing files, etc.; instead, we can use `get_nlcd()` from the `FedData` package to do all of the footwork for us.
+
 ```r
 library(FedData)
 
-nlcd = get_nlcd(
-  template = state,
-  label = "4pland",
-  year = 2011,
+nlcd = get_nlcd(        # fn for pulling NLCD data
+  template = state,     # polygon template for download
+  label = "4pland",     # this is just a character string label
+  year = 2011,          # specify the year (2016 should be available soon)
   force.redo = F
-) # pulling nlcd data
+) 
 
+# Plot!
 plot(nlcd)
 plot(pts, col="black", pch=20, cex=1.5, add=T)
 ```
