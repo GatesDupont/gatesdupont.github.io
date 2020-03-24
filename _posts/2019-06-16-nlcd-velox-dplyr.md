@@ -10,11 +10,9 @@ use_code: true
 
 ## <span style="color:#881c1c">Introduction</span>
 ---
-Environmental covariates are fundamental to spatially-explicit modeling in ecology. There are hundreds of metrics that have been used to characterize landscapes in ways that are biologically relevant, from average rainfall to net primary production. One such environmental covariate that is particularly popular in distribution modeling is proportional landcover. Calculated using a buffer around each point, this metric describes the composition of the surrounding landscape in terms of the proportion of each represented landcover class. The historical context for this metric comes from the well-known software, FRAGSTATS (McGarigal and Marks 1995), which includes this calculation -- termed <i>"pland."</i>
+Environmental covariates are fundamental to spatially-explicit modeling in ecology. There are hundreds of metrics that have been used to characterize and quantify landscapes in ways that are biologically relevant, from average rainfall to net primary production. One such environmental covariate that is particularly popular in distribution modeling is proportional landcover. Calculated using a buffer around each point, this metric describes the composition of the surrounding landscape in terms of the proportion of each represented landcover class. The historical context for this metric comes from the well-known software, FRAGSTATS (McGarigal and Marks 1995), which includes this calculation -- termed <i>"pland."</i>
 
-- NLCD (widely used)
-- velox (fast)
-- dplyr (C++, etc.)
+Now that R is so popular, FRAGSTATS has faded out a bit and has been all but replaced by the R package [`landscapemetrics`](https://r-spatialecology.github.io/landscapemetrics/). This package offers lots of tools and a straightforward workflow for the analysis of landscapes. The tutorial I'm offering here, though, is a bit more tailored to calculating proportional landcover very efficiently, with a very applicable example using the [National Land Cover Database](https://www.mrlc.gov/) (NLCD). This database is released by USGS and is very commonly used in analysis of landscapes from regions within the United States. One of the strengths of NLCD is that it offers landcover classifications at a very fine spatial resolution of 30m. This resolution surely provides an abundance of information and data to work with, however, it's computationally intensive. To deal with this, we will implement the R package [`velox`](http://philipphunziker.com/velox/), which was designed to achieve much faster raster extraction operations compared to other solutions within R. Much like the `dplyr` package, `velox` can achieve this efficiency by essential serving as a wrapper that conducts the operations in C++.
 
 ## <span style="color:#881c1c">Methods</span>
 ---
@@ -63,7 +61,7 @@ plot(pts, col="black", pch=20, cex=1.5, add=T)
   </figure>
 </center>
 
-### Extract using raster:extract()
+### Extract using raster::extract()
 
 ```r
 library(raster)
