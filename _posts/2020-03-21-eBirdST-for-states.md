@@ -35,7 +35,7 @@ First, start by downloading and installing the ebirdst package. If you are missi
 install.packages("ebirdst")
 ```
 
-We will need the following set of packages for this brief analysis. The raster package is the standard choice to work with raster data, which is a matrix-style datatype that is geo-referenced. For accessing some additional spatial data, we will use rnaturalearth, which we can then manipulate using the sf package. The ggplot2 package (and its extensions, including vridisLite and ggpubr) provides a simple yet sophisticated plot framework within the tidyverse, along with dplyr which is used for efficient data manipulation.
+We will need the following set of packages for this brief analysis. The [`raster`](https://rspatial.org/raster/spatial/8-rastermanip.html) package is the standard choice to work with raster data, which is simply a geo-referenced, matrix-style datatype. For accessing some additional spatial data, we will use [`rnaturalearth`](https://github.com/ropensci/rnaturalearth), which we can then manipulate using the [`sf`](https://r-spatial.github.io/sf/articles/sf1.html) package. The [`ggplot2`](https://ggplot2.tidyverse.org/) package (and its extensions, including `viridisLite` and `ggpubr`) provides a simple yet sophisticated plot framework within the [tidyverse](https://www.tidyverse.org/), along with [`dplyr`](https://dplyr.tidyverse.org/) which is used for efficient data manipulation.
 
 ```r
 library(ebirdst)
@@ -49,7 +49,7 @@ library(dplyr)
 # handle namespace conflicts
 extract <- raster::extract
 ```
-Before jumping into the analysis, we need to make sure we have a polygon of the state we are interested in, which here is Massachusetts. There are many ways to get this polygon, but this is one of the most straightforward methods I have come across.
+Before jumping into the analysis, we need to make sure we have a polygon of the state we are interested in, which here is Massachusetts. There are many ways to get this polygon, but presented below is one of the most straightforward methods I have come across.
 
 ```r
 "STATE DATA"
@@ -61,7 +61,7 @@ us <- getData("GADM", country="USA", level=1)
 ma = us[match(toupper("Massachusetts"),toupper(us$NAME_1)),]
 ```
 
-Now to the eBird data! To find the six-letter species code, it's easiest to search for the species on eBird using [Explore Species](https://ebird.org/explore) and then taking the code from the URL. For example, the URL for Eastern Meadowlark is: [https://ebird.org/species/**easmea**](https://ebird.org/species/easmea), and we can use that. Make sure `tifs_only` is set to `FALSE` if you want to include variable importance in your analysis. Depending on the species, the resulting file can be quite large and can take a while to download. Go get a coffee while you wait!
+Now to the eBird data. Here, there's a simple command in the `ebirdst` package that takes a six-letter species code of any of the species [currently available](https://ebird.org/science/status-and-trends). To find the six-letter species code, it's easiest to search for the species on eBird using [Explore Species](https://ebird.org/explore) and then taking the code from the URL. For example, the URL for Eastern Meadowlark is: [https://ebird.org/species/**easmea**](https://ebird.org/species/easmea), and we can use that. Make sure `tifs_only` is set to `FALSE` if you want to include variable importance in your analysis. Depending on the species, the resulting file can be quite large and can take a while to download. Go get a coffee while you wait!
 
 ```r
 "GETTING EBIRD DATA"
@@ -70,7 +70,7 @@ Now to the eBird data! To find the six-letter species code, it's easiest to sear
 sp_path <- ebirdst_download(species =  "easmea", tifs_only = FALSE)
 ```
 
-Now that we have all of this data downloaded and in our workspace, we can move on to analyzing it.
+Now that we have all of the data downloaded and in our R workspace, we can move on to analyzing it.
 
 <br>
 
@@ -81,12 +81,12 @@ Text
 ```r
 "ABUNDANCE"
 
-# load trimmed mean abundances
+# Load trimmed mean abundances
 abunds <- load_raster("abundance_umean", path = sp_path)
 ```
 
 ```r
-# Cropping to an area rougly the size of MA
+# Crop to an area rougly the size of MA
 # (Week 23 = June 6-12)
 abunds_23_cr =  crop(
   abunds[[23]], 
@@ -94,12 +94,12 @@ abunds_23_cr =  crop(
 ```
 
 ```r
-# define mollweide projection
+# Define mollweide projection
 mollweide <- "+proj=moll +lon_0=-90 +x_0=0 +y_0=0 +ellps=WGS84"
 ```
 
 ```r
-# project single layer from stack to mollweide
+# Project single layer from stack to mollweide
 week23_moll <- projectRaster(
   abunds_23_cr, 
   crs = mollweide, method = "ngb")
@@ -112,6 +112,35 @@ r = mask(week23_moll, ma_moll) %>%
   crop(., ma_moll) %>%
   projectRaster(., crs = crs(ma), method = "ngb")
 ```
+
+```r
+
+# Convert raster to data frame for ggplot
+r_spdf <- as(r, "SpatialPixelsDataFrame")
+r_df <- as.data.frame(r_spdf)
+colnames(r_df) <- c("value", "x", "y")
+```
+
+```r
+"PLOT ABUNDANCE"
+ggplot() +
+  geom_raster(data = r_df , aes(x = x, y = y, fill = value)) + 
+  scale_fill_gradientn(colors = abundance_palette(10, season = "breeding")) +
+  coord_quickmap() +
+  theme_bw() +
+  theme(legend.position = "right") +
+  labs(title = "Eastern Meadowlark",
+       subtitle = "Relative Abundance, June 6-12",
+       caption = "Data source: eBird Status and Trends",
+       fill = "RA", y = "Latitude", x = "Longitude")
+```
+
+<center>
+  <figure>
+    <img src="{{ site.baseurl }}/images/eame_map.png" style="width:800px;">
+    <figcaption>Fig. 1: Text needed here.</figcaption>
+  </figure>
+</center>
 
 Text
 
@@ -144,7 +173,7 @@ calc_effective_extent(sp_path, ext = lp_extent)
 <center>
   <figure>
     <img src="{{ site.baseurl }}/images/eame_pipts.png" style="width:800px;">
-    <figcaption>Fig. 1: Text needed here.</figcaption>
+    <figcaption>Fig. 2: Text needed here.</figcaption>
   </figure>
 </center>
 
@@ -156,44 +185,6 @@ plot_pis(pis, ext = lp_extent, by_cover_class = TRUE, n_top_pred = 15)
 <center>
   <figure>
     <img src="{{ site.baseurl }}/images/eame_pi.png" style="width:800px;">
-    <figcaption>Fig. 2: Text needed here.</figcaption>
-  </figure>
-</center>
-
-Text
-
-<br>
-
-### Final plot
-
-Text
-
-```r
-"FINAL PLOT"
-
-# Convert raster to data frame for ggplot
-r_spdf <- as(r, "SpatialPixelsDataFrame")
-r_df <- as.data.frame(r_spdf)
-colnames(r_df) <- c("value", "x", "y")
-```
-
-```r
-# RELATIVE ABUNDANCE
-ggplot() +
-  geom_raster(data = r_df , aes(x = x, y = y, fill = value)) + 
-  scale_fill_gradientn(colors = abundance_palette(10, season = "breeding")) +
-  coord_quickmap() +
-  theme_bw() +
-  theme(legend.position = "right") +
-  labs(title = "Eastern Meadowlark",
-       subtitle = "Relative Abundance, June 6-12",
-       caption = "Data source: eBird Status and Trends",
-       fill = "RA", y = "Latitude", x = "Longitude")
-```
-
-<center>
-  <figure>
-    <img src="{{ site.baseurl }}/images/eame_map.png" style="width:800px;">
     <figcaption>Fig. 3: Text needed here.</figcaption>
   </figure>
 </center>
@@ -201,6 +192,7 @@ ggplot() +
 Text
 
 <br>
+
 
 ### Interactive map
 
