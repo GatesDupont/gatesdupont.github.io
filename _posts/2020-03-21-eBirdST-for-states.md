@@ -200,6 +200,12 @@ ggplot() +
 
 Text
 
+
+
+<div align="center">
+  <iframe height="600" width="100%" src="{{ site.baseurl }}/attachments/eame_ma.html" frameborder="0"></iframe>
+</div>
+
 <br>
 
 ## <span style="color:#881c1c">Discussion</span>
