@@ -76,7 +76,7 @@ Now that we have all of the data downloaded and in our R workspace, we can move 
 
 ### Abundance
 
-Text
+We'll start by extracting the abundance raster from the downloaded data, which we can do by using the aptly-named `load_raster()` command.
 
 ```r
 "ABUNDANCE"
@@ -84,6 +84,8 @@ Text
 # Load trimmed mean abundances
 abunds <- load_raster("abundance_umean", path = sp_path)
 ```
+
+Next, for sake of simplicity, we will select a single week of interest, which makes the rest of the analysis straightforward. Often, especially for the breeding season, it's easy enough to assume predictions from a single week are representative of the entire breeding season, since we don't expect breeding pairs to be moving during this time. we crop that individual raster according to an extent that approximates the extent of the state, according the coordinate reference system (CRS) of the eBirdst data product.
 
 ```r
 # Crop to an area rougly the size of MA
@@ -93,25 +95,33 @@ abunds_23_cr =  crop(
   extent(c(-6.2e6, -5.6e6,  4.5e6, 4.85e6)))
 ```
 
+This raster comes has already been assigned a sinusoidal projection, but the `ebirdst` documentation recommends converting it to the mollweide projection, which is well-behaving and aesthetically-pleasing, especially for the Western Hemisphere.
+
 ```r
 # Define mollweide projection
 mollweide <- "+proj=moll +lon_0=-90 +x_0=0 +y_0=0 +ellps=WGS84"
 ```
 
+Having defined the CRS of this projection, we can now reproject our raster using the nearest neighbor method to compute raster values under this new projection. The "bilinear" method is preferred for continuous raster data, which is what we are working with, but for categorical rasters it is best to specify the method as "ngb", which is the nearest neighbors calculation.
+
 ```r
 # Project single layer from stack to mollweide
 week23_moll <- projectRaster(
   abunds_23_cr, 
-  crs = mollweide, method = "ngb")
+  crs = mollweide, method = "bilinear")
 ```
+
+Now we can finish up our manipulations of the abundance raster. First we need to transform our Massachusetts polygon to match its CRS to that of the abundance raster. This allows us to use the `mask()` command, which selects only the raster pixels within the polygon area. Analytically, this is not necessary, but it makes for a much cleaner and more easily interpretable representation. After cutting out the raster in this way, we can project the raster back to match its CRS to that of the original Massachusetts polygon, since that CRS is extremely common and easily recognized.
 
 ```r
 # Mask to MA and crop
 ma_moll = spTransform(ma, mollweide)
 r = mask(week23_moll, ma_moll) %>%
   crop(., ma_moll) %>%
-  projectRaster(., crs = crs(ma), method = "ngb")
+  projectRaster(., crs = crs(ma), method = "bilinear")
 ```
+
+We could plot this right away use base graphics in R by simply feeding the raster to the `plot()` command, however, I much prefer plots that have been made using `ggplot2`. This requires a bit more footwork, though, since we need to convert the raster data to a regular dataframe composed of three columns: the raster value and the two dimmensions of the coordinates.
 
 ```r
 
@@ -120,6 +130,8 @@ r_spdf <- as(r, "SpatialPixelsDataFrame")
 r_df <- as.data.frame(r_spdf)
 colnames(r_df) <- c("value", "x", "y")
 ```
+
+Finally, we are ready to plot this data in `ggplot2`. This is actually fairly straightforward after all of the data-wrangling, but some key notes: 1) We use `geom_raster()` to plot the raster, passing the three columns to the aesthetics function, `aes()`, filling each pixel with the raster value. 2) The function, `scale_fill_gradientn()` allows us to use the color palette provided by `ebirdst` to represent the breeding season. 3) We can let `ggplot2` approximate the appropriate aspect ratio using `coord_quickmap()` to make things a bit easier for us.
 
 ```r
 "PLOT ABUNDANCE"
@@ -135,14 +147,14 @@ ggplot() +
        fill = "RA", y = "Latitude", x = "Longitude")
 ```
 
+This produces the final plot of the abundance raster, as shown here:
+
 <center>
   <figure>
     <img src="{{ site.baseurl }}/images/eame_map.png" style="width:800px;">
-    <figcaption>Fig. 1: Text needed here.</figcaption>
+    <figcaption>Fig. 1: Estimated abundance for Eastern Meadowlark during the week of June 6, assuming constant values across the breeding season..</figcaption>
   </figure>
 </center>
-
-Text
 
 <br>
 
