@@ -200,6 +200,51 @@ ggplot() +
 
 Text
 
+<br>
+
+### Interactive map
+
+```r
+# Convert to leaflet CRS
+map_crs = sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
+r4map = projectRaster(r, crs = map_crs, method = "ngb")
+
+# Add some options to the map
+basemaps = c("CartoDB.Positron", "OpenStreetMap")
+pal <- colorNumeric(abundance_palette(10, season = "breeding"), values(r),
+                    na.color = "transparent")
+```
+
+Text
+
+```r
+# Map
+eame_ma_lf <-leaflet() %>% 
+  addTiles(urlTemplate = "http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga",
+           attribution = 'Google', group  =  "Google") %>%
+  addProviderTiles("CartoDB.Positron", group = "CartoDB") %>%
+  addProviderTiles("OpenStreetMap", group = "Open Street Map") %>%
+  addProviderTiles('Esri.WorldImagery', group = "ESRI") %>%
+  addRasterImage(r, colors = pal, opacity = 0.5, group = "Eastern Meadowlark")  %>%
+  addLegend(pal = pal, values = values(r),
+            title = "Relative abundance") %>%
+  leafem::addMouseCoordinates()  %>%
+  addLayersControl(
+    baseGroups = c("Gray", "Open Street Map", "Google", "ESRI"),
+    overlayGroups = "Eastern Meadowlark",
+    options = layersControlOptions(collapsed = FALSE)
+  )
+
+eame_ma_lf
+```
+
+Text 
+
+```r
+htmlwidgets::saveWidget(eame_ma_lf, 
+                        file = "~/Desktop/eame_ma.html", 
+                        selfcontained = TRUE)
+```
 
 
 <div align="center">
