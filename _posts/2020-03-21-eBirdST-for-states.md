@@ -262,12 +262,6 @@ Text
 test = c(1:4)
 ```
 
-Make leaflet map and host it here using:
-https://rdrr.io/cran/htmlwidgets/man/saveWidget.html
-https://twitter.com/mabecker89/status/1242254961456508928?s=20
-
-Possible next steps, recommendations for interactive mapping.
-
 <br>
 
 ## <span style="color:#881c1c">References</span>
