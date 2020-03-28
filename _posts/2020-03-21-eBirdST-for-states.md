@@ -217,10 +217,9 @@ We can see here that components of the observation process – such as observer 
 
 ### Interactive map
 
-At this point, we have a map of general areas where we expect to find our species of interest in the state, and we have further information on what habitats it prefers, which helps us understand the species. This gives us a general sense of the species, for example, we know we should look in croplands (and also grasslands, probably, because again, variable importance for machine learning is not quite exact), especially in the Connecticut River Valley. This is useful, but there is also a lot of that habitat, and we see a considerable amount of variation of abudnance among pixels in that region. It would be even better if we could see immediately what the area within each high-abundance pixel looks like. That way, we could look for croplands or grasslands within these top pixels and schedule surveys for those exact locations. 
+At this point, we have a map of general areas where we expect to find our species of interest in the state, and we have further information on what habitats it prefers, which helps us understand the species. This gives us a general sense of where we can find the species, for example, we know we should look in croplands (and also grasslands, probably, because again, variable importance for machine learning is not quite exact), especially in the Connecticut River Valley. This is useful, but there is also a lot of that habitat, and we see a considerable amount of variation in abudnance among the pixels in that region. It would be even better if we could see what the landscape looks like within each high-abundance pixel. That way, we could look for croplands or grasslands within these top pixels and schedule surveys for those exact locations. 
 
-
-Although this sounds complicated, it is fairly straightforward. First, we need to project our abundance raster to the CRS that `leaflet` uses by default.
+Thanks to the awesome developers of overleaf, this is not complicated at all. First, we need to project our abundance raster to the CRS that `leaflet` uses by default.
 
 ```r
 # Convert to leaflet CRS
@@ -238,7 +237,7 @@ map_attr = "© <a href='https://www.esri.com/en-us/home'>ESRI</a> © <a href='ht
 
 ```
 
-Finally, we can construct the ineteractive map. The `add*Tiles()` commands allow us to add a few different basemap options, which we store in groups and specify as `baseGroups` in the `addLayersControl()`, so that we can toggle between basemaps. I also added the abundance raster as an option so it can be toggled off to see the basemap more clearly. I chose four basemaps here: 1) CartoDB.Positron has a predominantly grayscale palette, making it easy to differentiate pixel colors. 2) Open Street Map is a commonly-used, crowd-sourced map that stores a lot of information and could be helpful in finding the names of parks or reserves, etc. 3) Google Maps – everyone knows and loves it. 4) ESRI World Imagery is probably the most useful for us, because we can satellite images of the landscape and look for viable croplands or other features. As for the rest of the map, we can add the raster and the legend using the correspodning, aptly-named functions. The `addMouseCoordinates()` function form the `leafem` package is extrmeley useful for organizing surveys: hovering over a location on the map will result in the coordinates being printed automatically on the top heading bar of the map.
+Finally, we can construct the ineteractive map. The `add*Tiles()` commands allow us to add several basemap options, which we store in groups and specify as `baseGroups` in the `addLayersControl()`, so that we can toggle between basemaps. We can also add the abundance raster as group so it can be toggled off to see the basemap more clearly. I chose four basemaps here: 1) CartoDB.Positron has a predominantly grayscale palette, giving the raster good contrast, making it easy to differentiate pixel colors. 2) Open Street Map is a commonly-used, crowd-sourced map that stores a lot of information and could be helpful in finding the names of parks or reserves, etc. 3) Google Maps – everyone knows and loves it. 4) ESRI World Imagery is probably the most useful for us, because we can see satellite images of the landscape and look for viable croplands or other features. As for the rest of the map, we can add the raster and the legend using their correspodning, aptly-named functions. The `addMouseCoordinates()` function from the `leafem` package is extrmeley useful for organizing surveys: hovering over a location on the map will result in the coordinates being printed automatically on the top heading bar of the map.
 
 ```r
 # Map
@@ -263,7 +262,7 @@ eame_ma_lf <-leaflet() %>%
 eame_ma_lf
 ```
 
-As a brief aside, you can save the map as an html widget using the code below, which makes it easier to share (or host on your website!).
+As a brief aside, we can save the map as an html widget using the code below, which makes it easier to share (or host on your website!).
 
 ```r
 htmlwidgets::saveWidget(eame_ma_lf, 
@@ -274,6 +273,7 @@ htmlwidgets::saveWidget(eame_ma_lf,
 
 <div align="center">
   <iframe height="600" width="100%" src="{{ site.baseurl }}/attachments/eame_ma.html" frameborder="0"></iframe>
+  <figcaption>Interactive 1: Estimated abundance for Eastern Meadowlark during the week of June 6, assuming constant values across the breeding season. Four basemaps shown. Hovering over the map results in the coordinates being printed at the top of the map. </figcaption>
 </div>
 
 <br>
