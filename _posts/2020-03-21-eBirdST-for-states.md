@@ -4,7 +4,7 @@ layout: post
 published: true
 use_code: true
 ---
-<i>A quick-start guide to accessing eBird Status & Trends data and analyzing it at the state level.</i>
+<i>Accessing, analyzing, and visualizing eBird Status & Trends data to plan data-driven, targeted surveys.</i>
 
 <br>
 
