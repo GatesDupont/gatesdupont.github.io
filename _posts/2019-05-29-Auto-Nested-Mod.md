@@ -4,15 +4,14 @@ layout: post
 published: true
 use_code: true
 ---
+
+<i>Model comparison for ziplss GAMs by automatically generating all nested models and running them in parallel.</i>
+
 <center>
   <div>
     <img src="{{ site.baseurl }}/images/banners/banner_autoNest.png" style="width:100%;">
   </div>
 </center>
-
-<br>
-
-<i>Model comparison for ziplss GAMs by automatically generating all nested models and running them in parallel.</i>
 
 <br>
 
