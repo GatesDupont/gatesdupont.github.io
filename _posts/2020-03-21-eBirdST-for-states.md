@@ -292,7 +292,7 @@ Below is just one example of what we can find by checking out the map underneath
 ## <span style="color:#881c1c">Conclusion</span>
 ---
 
-Text
+In this post we used the `ebirdst` package to move quickly through the process of accessing, analyzing, and visualizing eBird's Status and Trends data product at the state level. We learned about where we can find our species of interest in the state, and created an interactive map that makes it easy to organize future surveys to locate breeding pairs. This should be extremely helpful in finding good habitat to prioritize for protection and improve species conservation efforts.
 
 <br>
 
