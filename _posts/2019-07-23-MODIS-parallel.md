@@ -4,13 +4,16 @@ layout: post
 published: true
 use_code: true
 ---
-<i>Efficiently downloading mcd12q1 v.006 for a large spatial extent using parallel computing.</i>
 
 <center>
   <div>
     <img src="{{ site.baseurl }}/images/banners/banner_nlcd.png" style="width:100%;">
   </div>
 </center>
+
+<br>
+
+<i>Efficiently downloading mcd12q1 v.006 for a large spatial extent using parallel computing.</i>
 
 ## Introduction
 
