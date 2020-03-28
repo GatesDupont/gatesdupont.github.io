@@ -275,14 +275,13 @@ As described above, this interactive map is extremely useful for diving into eac
 
 <div align="center">
   <iframe height="600" width="100%" src="{{ site.baseurl }}/attachments/eame_ma.html" frameborder="0"></iframe>
-  <figcaption>Interactive 1: Estimated abundance for Eastern Meadowlark during the week of June 6, assuming constant values across the breeding season. Four basemaps shown. Hovering over the map results in the coordinates being printed at the top of the map. </figcaption>
 </div>
 
 Below is just one example of what we can find by checking out the map underneath the high-abundance pixels. This is a screesshot of Hanscom Airforce Base in eastern Massachusetts, a very well-known breeding location for Eastern Meadowlarks in Middlesex county. As we can see, the ebird model did a good job and predicted a relatively high abundance of the species here. I have seen meadowlarks here a few times during the breeding season; it is great to be able to personally verify this!
 
 <center>
   <figure>
-    <img src="{{ site.baseurl }}/images/eame_hanscom.png" style="width:800px;">
+    <img src="{{ site.baseurl }}/images/eame_hanscom.png" style="width:500px;">
     <figcaption>Fig. 4: One example of habitat underneath a high-abundance pixel. Here we can see Hanscom Airforce Base, one the best places to find breeding meadowlarks in eastern Massachusetts.</figcaption>
   </figure>
 </center>
