@@ -279,7 +279,7 @@ Below is just one example of what we can find by checking out the map underneath
 
 <center>
   <figure>
-    <img src="{{ site.baseurl }}/images/eame_hanscom.png" style="width:500px;" align=”right”>
+    <img src="{{ site.baseurl }}/images/eame_hanscom.png" style="width:350px;">
     <figcaption>Fig. 4: One example of habitat underneath a high-abundance pixel. Here we can see Hanscom Airforce Base, one the best places to find breeding meadowlarks in eastern Massachusetts.</figcaption>
   </figure>
 </center>
