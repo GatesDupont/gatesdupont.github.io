@@ -85,7 +85,9 @@ We'll start by extracting the abundance raster from the downloaded data, which w
 abunds <- load_raster("abundance_umean", path = sp_path)
 ```
 
-Next, for sake of simplicity, we will select a single week of interest, which makes the rest of the analysis straightforward. Often, especially for the breeding season, it's easy enough to assume predictions from a single week are representative of the entire breeding season, since we don't expect breeding pairs to be moving during this time. we crop that individual raster according to an extent that approximates the extent of the state, according the coordinate reference system (CRS) of the eBirdst data product.
+For sake of simplicity, we will select a single week of interest, which makes the rest of the analysis more straightforward than averaging across multiple weeks. Often, especially for the breeding season, it is easy enough to assume predictions from a single week are representative of the entire breeding season, since we do not expect breeding pairs to be moving during this time. We do this regularly when birding or doing targetted breeding surveys when we assume that weeks-old observations are still relevant. In that way, essentially this is a snapshot of breeding spots. 
+
+From the stack of weekly rasters, we take the one corresponding to our selected week and crop it according to a spatial extent that approximates a bounding box around the state, using the same units as the coordinate reference system (CRS) of the `ebirdst` data product.
 
 ```r
 # Crop to an area rougly the size of MA
@@ -95,14 +97,14 @@ abunds_23_cr =  crop(
   extent(c(-6.2e6, -5.6e6,  4.5e6, 4.85e6)))
 ```
 
-This raster comes has already been assigned a sinusoidal projection, but the `ebirdst` documentation recommends converting it to the mollweide projection, which is well-behaving and aesthetically-pleasing, especially for the Western Hemisphere.
+This raster already has been assigned a sinusoidal projection, but the `ebirdst` documentation recommends converting it to the mollweide projection, which is well-behaving and aesthetically-pleasing, especially for maps of the Western Hemisphere.
 
 ```r
 # Define mollweide projection
 mollweide <- "+proj=moll +lon_0=-90 +x_0=0 +y_0=0 +ellps=WGS84"
 ```
 
-Having defined the CRS of this projection, we can now reproject our raster using the nearest neighbor method to compute raster values under this new projection. The "bilinear" method is preferred for continuous raster data, which is what we are working with, but for categorical rasters it is best to specify the method as "ngb", which is the nearest neighbors calculation.
+We can now reproject our raster by using one of two methods for computing the raster values under this new projection. The "bilinear" method is preferred for continuous raster data, which is what we are working with, but for categorical rasters it is best to specify the method as "ngb", which is the nearest neighbors calculation.
 
 ```r
 # Project single layer from stack to mollweide
@@ -111,7 +113,7 @@ week23_moll <- projectRaster(
   crs = mollweide, method = "bilinear")
 ```
 
-Now we can finish up our manipulations of the abundance raster. First we need to transform our Massachusetts polygon to match its CRS to that of the abundance raster. This allows us to use the `mask()` command, which selects only the raster pixels within the polygon area. Analytically, this is not necessary, but it makes for a much cleaner and more easily interpretable representation. After cutting out the raster in this way, we can project the raster back to match its CRS to that of the original Massachusetts polygon, since that CRS is extremely common and easily recognized.
+Now we can finish up our manipulations of the abundance raster. We need to transform our state polygon to match its CRS to that of the abundance raster. This allows us to use the `mask()` command, which selects only the raster pixels with centroids within the polygon area. Analytically, this is not necessary, but it makes for a much cleaner and more easily interpretable representation. After cutting out the raster in this way, we can project the raster back to match its CRS to that of the original state polygon, since that CRS is extremely common and easily recognized.
 
 ```r
 # Mask to MA and crop
@@ -121,7 +123,7 @@ r = mask(week23_moll, ma_moll) %>%
   projectRaster(., crs = crs(ma), method = "bilinear")
 ```
 
-We could plot this right away use base graphics in R by simply feeding the raster to the `plot()` command, however, I much prefer plots that have been made using `ggplot2`. This requires a bit more footwork, though, since we need to convert the raster data to a regular dataframe composed of three columns: the raster value and the two dimmensions of the coordinates.
+We could plot this right away using base graphics in R by simply feeding the raster to the `plot()` command, however, I much prefer plots that have been made using `ggplot2`. This requires a bit more footwork, though, since we need to convert the raster data to a regular dataframe composed of three columns: the raster value and the two dimmensions of the coordinates.
 
 ```r
 
@@ -131,7 +133,7 @@ r_df <- as.data.frame(r_spdf)
 colnames(r_df) <- c("value", "x", "y")
 ```
 
-Finally, we are ready to plot this data in `ggplot2`. This is actually fairly straightforward after all of the data-wrangling, but some key notes: 1) We use `geom_raster()` to plot the raster, passing the three columns to the aesthetics function, `aes()`, filling each pixel with the raster value. 2) The function, `scale_fill_gradientn()` allows us to use the color palette provided by `ebirdst` to represent the breeding season. 3) We can let `ggplot2` approximate the appropriate aspect ratio using `coord_quickmap()` to make things a bit easier for us.
+Finally, we are ready to plot this data in `ggplot2`. This is actually fairly straightforward after all of the data-wrangling, but some key notes: 1) We use `geom_raster()` to plot the raster, passing the three columns to the aesthetics function, `aes()`, filling each pixel with the associated raster value. 2) The function, `scale_fill_gradientn()` allows us to use the color palette provided by `ebirdst` to represent the breeding season. 3) We can let `ggplot2` approximate the appropriate aspect ratio using `coord_quickmap()` to make things a bit easier for us.
 
 ```r
 "PLOT ABUNDANCE"
@@ -147,7 +149,7 @@ ggplot() +
        fill = "RA", y = "Latitude", x = "Longitude")
 ```
 
-This produces the final plot of the abundance raster, as shown here:
+This produces the final plot of the breeding abundance raster, as shown here:
 
 <center>
   <figure>
@@ -156,15 +158,15 @@ This produces the final plot of the abundance raster, as shown here:
   </figure>
 </center>
 
-We now have a complete map of abundance for our species and state of interest. One of the most prominent regions of higher abundance is in western-central Massachusetts, particularly the lowlands of the Connecticut River Valley. This area is prime for grasslands (and therefore agriculture) as it is low-elevation, relatively flat overall, and complete with a constant water source. As a mental check, this makes sense, and we see this trend in the raw data alone. It's also good to keep in mind as we dig into habitat assosciations in the next section, helping us make a bit more sense of what we are seeing.
+We now have a complete map of abundance for our species and state of interest. It is always good practice to take a step back and give it some critical though, to ensure it makes sense before moving forward. One of the most prominent regions of higher abundance is in western-central Massachusetts, particularly the lowlands of the Connecticut River Valley. This area is prime for grasslands (and therefore agriculture) as it is low-elevation, relatively flat overall, and complete with a constant water source. As a mental check, this makes sense, and we can even see this trend in the raw data alone. We will keep this in mind as we dig into habitat assosciations in the next section, helping us make a bit more sense of what we are seeing.
 
 <br>
 
 ### Variable importance
 
-Quanitfying the importance of explanatory variables is a bit less straightforward using machine learning models (as used for these maps) than classical statistical models, but there are still some ways to quanitfy related measures. Often, we would only be able to access this information in regard to the full model, representing the entire range of the species. Conveniently, though, the modeling framework that the eBird science team employed is nuanced and allows for localized measures of variable importance. Although I don't immediately recall the exact modeling methods, I know the original eBird STEM ('Spatio-Temporal Exploratory Model') methods used stixels, which are thousands of randomly-generated geometric polygons throughout the area of interest, with a model for each stixel, and a final model that drills down through all of the stixels to get an average per-pixel estimate of the response. Methods like these that incorporate localized models lend themselves to equally as localized quantifications of variable importance, as we'll see here. Essentially, variable importance is cached in (what appear to be) randomly-selected locations throughout the modeled region. We can then compile the data from these point locations to calculate the effective extent of the modeling area and the importance of the variables used to model that area.
+Quanitfying the importance of explanatory variables is a bit less straightforward when using machine learning models (as used for these maps) are opposed to classical statistical models, which is important to understand and consider the consequences of when making inferences from such data. Often, we would only be able to access this information in regard to the full model, representing the entire range of the species. Conveniently, though, the modeling framework that the eBird science team employed is nuanced and allows for localized measures of variable importance. Although I do not recall immediately the exact modeling methods, I know the original eBird STEM ('Spatio-Temporal Exploratory Model') methods used stixels, which are thousands of randomly-generated geometric polygons throughout the area of interest, with a model for each stixel, and a final model that drills down through all of the stixels to get an average, per-pixel estimate of the response. Methods like these that rely on localized models lend themselves to equally localized quantifications of variable importance, as we will see here. Essentially, variable importance is cached in *(what appear to be)* randomly-selected locations throughout the modeled region. We can then compile the data from these point locations to calculate the effective extent of the modeling area and the importance of the variables used to model that area.
 
-We can start by creating an ebirdst extent object, which is a geographic extent and associated timeframe.
+We can start by creating an `ebirdst` extent object, which includes a spatial extent and an associated timeframe.
 
 ```r
 "VARIABLE IMPORTANCE"
@@ -190,7 +192,7 @@ calc_effective_extent(sp_path, ext = lp_extent)
   </figure>
 </center>
 
-Now we can load all of the caching locations, and use the `plot_pis()` command, which selects only those within the extent object and plots their data.
+Now we can load all of the data-caching locations and use the `plot_pis()` command, which selects only those locations within the extent object and plots their data.
 
 ```r
 # Load predictor importance
@@ -207,7 +209,7 @@ plot_pis(pis, ext = lp_extent, by_cover_class = TRUE, n_top_pred = 15)
   </figure>
 </center>
 
-We can see here that things related to te observation process are the most important, such as observer effort and observation date. One environmental variable sticks out high up among that group though: elevation. This makes sense given what we discussed after plotting the abundance map, regarding how the low and even elevation makes a good place for grasslands and agriculture, which are essential for meadowlarks. In fact, we see croplands is the next most important of the remaining environmental variables, which also supports our mental check and helps us understand the habitat requirements of the species. It's important to remember that a high degree of variable importance *also* can mean that there is a strong but *negative* association between that variable and the response. This is likely why the forest variables are listed as the next most important – we would expect to almost never find an Eastern Meadowlark in the forest, and we are quite sure about that.
+We can see here that components of the observation process – such as observer effort and observation date – are the most important in explaining observation outcomes. Interestingly, one environmental variable sticks out among that group: elevation. This makes sense given what we discussed after plotting the abundance map, regarding how flat and low elevation areas are a good place for grasslands and agriculture, which are essential for meadowlarks. In fact, we see croplands is the next most important of the remaining environmental variables, supporting our mental check and helping us understand the habitat requirements of the species. In making these inferences, it is important to remember that a high degree of variable importance *also* can mean that there is a strong but *negative* association between that variable and the response. This is likely why the forest variables are listed as the next most important – we would expect to almost never find an Eastern Meadowlark in the forest, and we are quite sure about that.
 
 <br>
 
