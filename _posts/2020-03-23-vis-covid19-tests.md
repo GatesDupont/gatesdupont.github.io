@@ -5,6 +5,15 @@ published: true
 use_code: true
 ---
 
+
+<center>
+  <div>
+    <img src="{{ site.baseurl }}/images/banners/banner_covid.png" style="width:100%;">
+  </div>
+</center>
+
+<br>
+
 <i>Introducing some tips and tricks for accessing and visualizing testing data from the COVID-19 pandemic.</i>
 
 <br>
