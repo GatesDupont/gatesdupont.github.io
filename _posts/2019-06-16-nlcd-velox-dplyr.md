@@ -5,13 +5,15 @@ published: true
 use_code: true
 ---
 
+<i>Using velox and dplyr to efficiently calculate proportional landcover ('pland') in R </i>
+
 <center>
   <div>
     <img src="{{ site.baseurl }}/images/banners/banner_nlcd.png" style="width:100%;">
   </div>
 </center>
 
-<i>Using velox and dplyr to efficiently calculate proportional landcover ('pland') in R </i>
+<br>
 
 ## <span style="color:#881c1c">Introduction</span>
 ---
