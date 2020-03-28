@@ -154,7 +154,7 @@ This produces the final plot of the breeding abundance raster, as shown here:
 <center>
   <figure>
     <img src="{{ site.baseurl }}/images/eame_map.png" style="width:800px;">
-    <figcaption>Fig. 1: Estimated abundance for Eastern Meadowlark during the week of June 6, assuming constant values across the breeding season..</figcaption>
+    <figcaption>Fig. 1: Estimated abundance for Eastern Meadowlark during the week of June 6, assuming constant values across the breeding season.</figcaption>
   </figure>
 </center>
 
