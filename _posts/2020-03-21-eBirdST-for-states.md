@@ -156,7 +156,7 @@ This produces the final plot of the abundance raster, as shown here:
   </figure>
 </center>
 
-We now have a complete map of abundance for our species and state of interest. We can dig in a bit more in the next section, which should help us make a bit more sense of what we are seeing.
+We now have a complete map of abundance for our species and state of interest. One of the most prominent regions of higher abundance is in western-central Massachusetts, particularly the lowlands of the Connecticut River Valley. This area is prime for grasslands (and therefore agriculture) as it is low-elevation, relatively flat overall, and complete with a constant water source. As a mental check, this makes sense, and we see this trend in the raw data alone. It's also good to keep in mind as we dig into habitat assosciations in the next section, helping us make a bit more sense of what we are seeing.
 
 <br>
 
@@ -207,7 +207,7 @@ plot_pis(pis, ext = lp_extent, by_cover_class = TRUE, n_top_pred = 15)
   </figure>
 </center>
 
-We can see here that things related to te observation process are the most important, such as observer effort and observation date. After these variables, we move onto the environmental ones, which should be a bit more ecologically informative.
+We can see here that things related to te observation process are the most important, such as observer effort and observation date. One environmental variable sticks out high up among that group though: elevation. This makes sense given what we discussed after plotting the abundance map, regarding how the low and even elevation makes a good place for grasslands and agriculture, which are essential for meadowlarks. In fact, we see croplands is the next most important of the remaining environmental variables, which also supports our mental check and helps us understand the habitat requirements of the species. It's important to remember that a high degree of variable importance *also* can mean that there is a strong but *negative* association between that variable and the response. This is likely why the forest variables are listed as the next most important – we would expect to almost never find an Eastern Meadowlark in the forest, and we are quite sure about that.
 
 <br>
 
