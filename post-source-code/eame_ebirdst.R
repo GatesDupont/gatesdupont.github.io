@@ -122,8 +122,3 @@ eame_ma_lf
 htmlwidgets::saveWidget(eame_ma_lf, 
                         file = "eame_ma.html", 
                         selfcontained = TRUE)
-
-
-
-
-
