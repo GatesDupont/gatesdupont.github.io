@@ -10,6 +10,8 @@ use_code: true
   </div>
 </center>
 
+<br>
+
 <i>Model comparison for ziplss GAMs by automatically generating all nested models and running them in parallel.</i>
 
 <br>
