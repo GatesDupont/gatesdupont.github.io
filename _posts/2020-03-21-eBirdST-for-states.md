@@ -127,7 +127,6 @@ r = mask(week23_moll, ma_moll) %>%
 We could plot this right away using base graphics in R by simply feeding the raster to the `plot()` command, however, I much prefer plots that have been made using `ggplot2`. This requires a bit more footwork, though, since we need to convert the raster data to a regular dataframe composed of three columns: the raster value and the two dimmensions of the coordinates.
 
 ```r
-
 # Convert raster to data frame for ggplot
 r_spdf <- as(r, "SpatialPixelsDataFrame")
 r_df <- as.data.frame(r_spdf)
