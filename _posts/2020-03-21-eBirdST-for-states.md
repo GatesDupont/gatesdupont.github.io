@@ -25,7 +25,7 @@ Luckily, eBird has already completed most of [their analysis for Eastern Meadowl
 
 <br>
 
-## <span style="color:#881c1c">Methods</span>
+## <span style="color:#881c1c">Walkthrough</span>
 ---
 ### Setup
 
@@ -156,25 +156,26 @@ This produces the final plot of the abundance raster, as shown here:
   </figure>
 </center>
 
+We now have a complete map of abundance for our species and state of interest. We can dig in a bit more in the next section, which should help us make a bit more sense of what we are seeing.
+
 <br>
 
 ### Variable importance
 
-Text
+Quanitfying the importance of explanatory variables is a bit less straightforward using machine learning models (as used for these maps) than classical statistical models, but there are still some ways to quanitfy related measures. Often, we would only be able to access this information in regard to the full model, representing the entire range of the species. Conveniently, though, the modeling framework that the eBird science team employed is nuanced and allows for localized measures of variable importance. Although I don't immediately recall the exact modeling methods, I know the original eBird STEM ('Spatio-Temporal Exploratory Model') methods used stixels, which are thousands of randomly-generated geometric polygons throughout the area of interest, with a model for each stixel, and a final model that drills down through all of the stixels to get an average per-pixel estimate of the response. Methods like these that incorporate localized models lend themselves to equally as localized quantifications of variable importance, as we'll see here. Essentially, variable importance is cached in (what appear to be) randomly-selected locations throughout the modeled region. We can then compile the data from these point locations to calculate the effective extent of the modeling area and the importance of the variables used to model that area.
+
+We can start by creating an ebirdst extent object, which is a geographic extent and associated timeframe.
 
 ```r
 "VARIABLE IMPORTANCE"
 
-# Load predictor importance
-pis = load_pis(sp_path)
-```
-
-```r
 # Select region and season
 lp_extent <- ebirdst_extent(
   st_as_sf(ma), 
   t = c("2016-06-06", "2016-06-12")) # Models assumed 2016
 ```
+
+The package comes with a straightforward workflow to calclulate and plot the effective extent, using the spatio-temporal extent object we generated above.
 
 ```r
 # Plot centroids and extent of analysis
@@ -185,23 +186,28 @@ calc_effective_extent(sp_path, ext = lp_extent)
 <center>
   <figure>
     <img src="{{ site.baseurl }}/images/eame_pipts.png" style="width:800px;">
-    <figcaption>Fig. 2: Text needed here.</figcaption>
+    <figcaption>Fig. 2: Effective extent of the modeling area for our analysis of Eastern Meadowlark abundance during the breeding season. Black dots represent the point locations with cached variable importance data. </figcaption>
   </figure>
 </center>
 
+Now we can load all of the caching locations, and use the `plot_pis()` command, which selects only those within the extent object and plots their data.
 
 ```r
+# Load predictor importance
+pis = load_pis(sp_path)
+
+# Plot
 plot_pis(pis, ext = lp_extent, by_cover_class = TRUE, n_top_pred = 15)
 ```
 
 <center>
   <figure>
     <img src="{{ site.baseurl }}/images/eame_pi.png" style="width:800px;">
-    <figcaption>Fig. 3: Text needed here.</figcaption>
+    <figcaption>Fig. 3: Variable importance data from a model of Eastern Meadowlark breeding season abundance in the state of Massachusetts.</figcaption>
   </figure>
 </center>
 
-Text
+We can see here that things related to te observation process are the most important, such as observer effort and observation date. After these variables, we move onto the environmental ones, which should be a bit more ecologically informative.
 
 <br>
 
@@ -212,7 +218,11 @@ Text
 # Convert to leaflet CRS
 map_crs = sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
 r4map = projectRaster(r, crs = map_crs, method = "ngb")
+```
 
+Text
+
+```r
 # Add some options to the map
 basemaps = c("CartoDB.Positron", "OpenStreetMap")
 pal = colorNumeric(abundance_palette(10, season = "breeding"), values(r),
@@ -261,14 +271,10 @@ htmlwidgets::saveWidget(eame_ma_lf,
 
 <br>
 
-## <span style="color:#881c1c">Discussion</span>
+## <span style="color:#881c1c">Conclusion</span>
 ---
 
 Text
-
-```r
-test = c(1:4)
-```
 
 <br>
 
