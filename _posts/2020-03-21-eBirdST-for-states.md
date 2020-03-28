@@ -6,6 +6,12 @@ use_code: true
 ---
 <i>Accessing, analyzing, and visualizing eBird Status & Trends data to plan data-driven, targeted surveys.</i>
 
+<center>
+  <div>
+    <img src="{{ site.baseurl }}/images/banners/banner_eame.png" style="width:100%;">
+  </div>
+</center>
+
 <br>
 
 ## <span style="color:#881c1c">Introduction</span>
