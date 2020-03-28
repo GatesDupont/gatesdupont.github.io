@@ -4,7 +4,6 @@ layout: post
 published: true
 use_code: true
 ---
-<i>Using velox and dplyr to efficiently calculate proportional landcover ('pland') in R </i>
 
 <center>
   <div>
@@ -12,7 +11,7 @@ use_code: true
   </div>
 </center>
 
-Test2
+<i>Using velox and dplyr to efficiently calculate proportional landcover ('pland') in R </i>
 
 ## <span style="color:#881c1c">Introduction</span>
 ---
