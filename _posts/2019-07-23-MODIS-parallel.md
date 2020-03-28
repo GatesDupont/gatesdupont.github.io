@@ -15,8 +15,10 @@ use_code: true
 
 <i>Efficiently downloading mcd12q1 v.006 for a large spatial extent using parallel computing.</i>
 
-## Introduction
+<br>
 
+## Introduction
+---
 The following R code is something I wrote during my Fellowship at the San Diego Zoo's Institute for Conservation Research, where I put together the [JAGSMAP](http://www.JAGSMAP.org) initiative, a data-sharing platform that brings together a range-wide, trans-boundary network of Jaguar biologists to address important challenges in jaguar conservation. Part of my work was compiling spatial covariates for throughout Central and South America. Downloading this data can take a while, so I implemented an easy parallel computing framework in R to speed up the process. All of this code relies on only a few functions from the `doParallel` and `foreach` packages, leaving little else that needs explaining outside of the general framework, which is rather apparent, but I provided a fairly thorough amount of commenting throughout this script. I hope it helps! 
 
 
