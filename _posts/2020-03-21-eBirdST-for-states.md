@@ -25,7 +25,7 @@ Luckily, eBird has already completed most of [their analysis for Eastern Meadowl
 
 <br>
 
-## <span style="color:#881c1c">Walkthrough</span>
+## <span style="color:#881c1c">Methods</span>
 ---
 ### Setup
 
