@@ -35,13 +35,14 @@ First, start by downloading and installing the ebirdst package. If you are missi
 install.packages("ebirdst")
 ```
 
-We will need the following set of packages for this brief analysis. The [`raster`](https://rspatial.org/raster/spatial/8-rastermanip.html) package is the standard choice to work with raster data, which is simply a geo-referenced, matrix-style datatype. For accessing some additional spatial data, we will use [`rnaturalearth`](https://github.com/ropensci/rnaturalearth), which we can then manipulate using the [`sf`](https://r-spatial.github.io/sf/articles/sf1.html) package. The [`ggplot2`](https://ggplot2.tidyverse.org/) package (and its extensions, including `viridisLite` and `ggpubr`) provides a simple yet sophisticated plot framework within the [tidyverse](https://www.tidyverse.org/), along with [`dplyr`](https://dplyr.tidyverse.org/) which is used for efficient data manipulation.
+We will need the following set of packages for this brief analysis. The [`raster`](https://rspatial.org/raster/spatial/8-rastermanip.html) package is the standard choice to work with raster data, which is simply a geo-referenced, matrix-style datatype. For accessing some additional spatial data, we will use [`rnaturalearth`](https://github.com/ropensci/rnaturalearth), which we can then manipulate using the [`sf`](https://r-spatial.github.io/sf/articles/sf1.html) package. The [`ggplot2`](https://ggplot2.tidyverse.org/) package (and its extensions, including `viridisLite` and `ggpubr`) provides a simple yet sophisticated plot framework within the [tidyverse](https://www.tidyverse.org/), along with [`dplyr`](https://dplyr.tidyverse.org/) which is used for efficient data manipulation. Finally, we will use [`leaflet`](https://rstudio.github.io/leaflet/) to make a very useful interactive map, which is the biggest strength of the package.
 
 ```r
 library(ebirdst)
 library(raster)
 library(sf)
 library(rnaturalearth)
+library(leaflet)
 library(ggplot2)
 library(ggpubr)
 library(viridisLite)
@@ -192,7 +193,7 @@ calc_effective_extent(sp_path, ext = lp_extent)
   </figure>
 </center>
 
-Now we can load all of the data-caching locations and use the `plot_pis()` command, which selects only those locations within the extent object and plots their data.
+Now we can load all of the data-caching locations and use the `plot_pis()` command, which selects only those locations within the extent object and plots their data. Note: I manually modified this plotting function to improve the formatting of the figure, so yours will look slightly different.
 
 ```r
 # Load predictor importance
@@ -216,24 +217,28 @@ We can see here that components of the observation process – such as observer 
 
 ### Interactive map
 
+At this point, we have a map of general areas where we expect to find our species of interest in the state, and we have further information on what habitats it prefers, which helps us understand the species. This gives us a general sense of the species, for example, we know we should look in croplands (and also grasslands, probably, because again, variable importance for machine learning is not quite exact), especially in the Connecticut River Valley. This is useful, but there is also a lot of that habitat, and we see a considerable amount of variation of abudnance among pixels in that region. It would be even better if we could see immediately what the area within each high-abundance pixel looks like. That way, we could look for croplands or grasslands within these top pixels and schedule surveys for those exact locations. 
+
+
+Although this sounds complicated, it is fairly straightforward. First, we need to project our abundance raster to the CRS that `leaflet` uses by default.
+
 ```r
 # Convert to leaflet CRS
 map_crs = sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
-r4map = projectRaster(r, crs = map_crs, method = "ngb")
+r4map = projectRaster(r, crs = map_crs, method = "bilinear")
 ```
 
-Text
+We can set up a couple specifics for the map, including the breeding color palette and some map attributions, which will be displayed at the bottom of the map.
 
 ```r
-# Add some options to the map
-basemaps = c("CartoDB.Positron", "OpenStreetMap")
+# Add some specifics
 pal = colorNumeric(abundance_palette(10, season = "breeding"), values(r),
                     na.color = "transparent")
 map_attr = "© <a href='https://www.esri.com/en-us/home'>ESRI</a> © <a href='https://www.google.com/maps/'>Google</a> © <a href='https://ebird.org/science/status-and-trends'>eBird / Cornell Lab of Ornithology</a> © <a href='https://www.gatesdupont.com/'>Gates Dupont</a>"
 
 ```
 
-Text
+Finally, we can construct the ineteractive map. The `add*Tiles()` commands allow us to add a few different basemap options, which we store in groups and specify as `baseGroups` in the `addLayersControl()`, so that we can toggle between basemaps. I also added the abundance raster as an option so it can be toggled off to see the basemap more clearly. I chose four basemaps here: 1) CartoDB.Positron has a predominantly grayscale palette, making it easy to differentiate pixel colors. 2) Open Street Map is a commonly-used, crowd-sourced map that stores a lot of information and could be helpful in finding the names of parks or reserves, etc. 3) Google Maps – everyone knows and loves it. 4) ESRI World Imagery is probably the most useful for us, because we can satellite images of the landscape and look for viable croplands or other features. As for the rest of the map, we can add the raster and the legend using the correspodning, aptly-named functions. The `addMouseCoordinates()` function form the `leafem` package is extrmeley useful for organizing surveys: hovering over a location on the map will result in the coordinates being printed automatically on the top heading bar of the map.
 
 ```r
 # Map
@@ -258,7 +263,7 @@ eame_ma_lf <-leaflet() %>%
 eame_ma_lf
 ```
 
-Text 
+As a brief aside, you can save the map as an html widget using the code below, which makes it easier to share (or host on your website!).
 
 ```r
 htmlwidgets::saveWidget(eame_ma_lf, 
