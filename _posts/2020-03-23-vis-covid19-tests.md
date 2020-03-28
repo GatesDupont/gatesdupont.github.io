@@ -13,6 +13,8 @@ use_code: true
   </div>
 </center>
 
+<br>
+
 ## Introduction
 
 This is a quick post to introduce a few useful tips and tricks that are readily available in R to efficiently produce a state-level visualization of reported testing data for COVID-19. The end-goal here, as you can see in Figure 1, is a geo-facetted map showing dialy totals for the cumulative number of tests administered by state. To make it more intuitive, that number is scaled to the number of tests per thousand people. 
