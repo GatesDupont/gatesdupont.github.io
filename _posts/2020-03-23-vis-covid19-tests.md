@@ -2,7 +2,7 @@
 title: "Visualizing state-level testing for COVID-19"
 layout: post
 published: true
-thumbnail: [{{ site.baseurl }}/images/banners/banner_covid.png]
+thumbnail: '{{ site.baseurl }}/images/banners/banner_covid.png'
 use_code: true
 ---
 
