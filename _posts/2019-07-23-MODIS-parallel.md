@@ -2,7 +2,7 @@
 title: "Parallel downloading of MODIS land cover"
 layout: post
 published: true
-thumbnail: /images/nlcd_extract_pts.png
+thumbnail: /images/thumbnails/fast_modis_download.jpg
 use_code: true
 ---
 
