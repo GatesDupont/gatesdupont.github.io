@@ -2,7 +2,7 @@
 title: "Visualizing state-level testing for COVID-19"
 layout: post
 published: true
-thumbnail: /images/covid_testing.jpg
+thumbnail: /images/thumbnails/covid_testing_NE.jpg
 use_code: true
 ---
 
