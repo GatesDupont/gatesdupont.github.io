@@ -2,7 +2,7 @@
 title: "Visualizing state-level testing for COVID-19"
 layout: post
 published: true
-thumbnail: https://gatesdupont.com/images/covid_testing.jpg
+thumbnail: /images/covid_testing.jpg
 use_code: true
 ---
 
