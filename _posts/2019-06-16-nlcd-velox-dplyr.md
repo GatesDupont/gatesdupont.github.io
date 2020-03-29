@@ -2,7 +2,7 @@
 title: "Fast workflow to calculate proportional landcover"
 layout: post
 published: true
-thumbnail: /images/thumbnails/pland.png
+thumbnail: /images/thumbnails/pland.jpg
 use_code: true
 ---
 
