@@ -10,18 +10,28 @@ layout: default
 {%- for post in site.posts -%}
   <li>
 
+    
+    
+    <! ––– DATE –––>
     {%- assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" -%}
     <span class="post-meta">{{ post.date | date: date_format }}</span>
 
+    
+    <! ––– TITLE –––>
     <h2>
       <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
     </h2>
     
+    
+    <! ––– EXCERPT –––>
     <span>{{ post.excerpt | markdownify | truncatewords: 50 }}</span>
     
-    <! –– Trying to add thumbnail ––> 
+    
+    <! –– THUMBNAIL ––> 
     <img class="thumbnail" src={{ post.thumbnail }}>
 
+    
+    
   </li>
 {%- endfor -%}
 </ul>
