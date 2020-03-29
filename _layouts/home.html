@@ -17,6 +17,9 @@ layout: default
       <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
     </h2>
 
+    <! –– Trying to add thumbnail ––> 
+    <img class="thumbnail" src={{ post.thumbnail }}>
+    
     <span>{{ post.excerpt | markdownify | truncatewords: 50 }}</span>
 
   </li>
