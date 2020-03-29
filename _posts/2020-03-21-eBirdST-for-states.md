@@ -2,7 +2,7 @@
 title: "State manager's guide to eBird Status & Trends"
 layout: post
 published: true
-thumbnail: /images/eame_map.png
+thumbnail: /images/thumbnails/eame_ma_sq.jpg
 use_code: true
 ---
 <i>Accessing, analyzing, and visualizing eBird Status & Trends data to plan data-driven, targeted surveys.</i>
