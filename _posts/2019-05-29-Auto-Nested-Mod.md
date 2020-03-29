@@ -152,7 +152,7 @@ In both stages, all covariates are fully-defined in the first row and the follow
 
 ### Converting to model formulas
 
-The next part of this code is a bit less straightforward. In the first line we create a`list` vector with 256 blank elements, which is the total number of models we'll test (1 global + 255 nested). This is because there are four parameters with two options (variant vs invariant) in each of the two steps, so: $$2<sup>2</sup> * 2<sup>2</sup> = 16$$. The model formulas need to be saved in a list form as this is what the `mgcv::gam()` function expects. 
+The next part of this code is a bit less straightforward. In the first line we create a`list` vector with 256 blank elements, which is the total number of models we'll test (1 global + 255 nested). This is because there are four parameters with two options (variant vs invariant) in each of the two steps, so: $2^2 * 2^2 = 16$. The model formulas need to be saved in a list form as this is what the `mgcv::gam()` function expects. 
 
 We set `k = 1` as the initial position for iteration through the nested loops. We then loop through both stages of the model, unlisting each row from the `data.frame` and converting it to a `character` vector. During this process, the selected parameters are concatenated with a `+` symbol to follow the syntax expected by the `mgcv::gam()` function. The final model uses `~` in concatenating both stages from the `i` and `j` loops, and again uses `~` to specify the response (here, `maxFlock`).
 
