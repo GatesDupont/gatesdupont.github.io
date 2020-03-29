@@ -154,6 +154,7 @@ ul.contact {
 
 .thumbnail{
   max-width: 25%;
+  float: left;
 }
 
 /*******************
