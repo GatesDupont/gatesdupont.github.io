@@ -2,7 +2,7 @@
 title: "Automatically generating nested hierarchical models"
 layout: post
 published: true
-thumbnail: /images/banners/banner_autoNest.png
+thumbnail: /images/thumbnails/nested_gams.jpg
 slug: 'Auto-Nested-Mod'
 use_code: true
 ---
