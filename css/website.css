@@ -152,6 +152,10 @@ ul.contact {
   color: grey;
 }
 
+.thumbnail{
+  width: 10%;
+}
+
 /*******************
  * PROJECTS and ABOUT
  ******************/
