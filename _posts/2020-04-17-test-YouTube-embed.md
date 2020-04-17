@@ -1,7 +1,7 @@
 ---
 title: "Test post"
 layout: post
-published: false
+published: true
 use_code: true
 ---
 
