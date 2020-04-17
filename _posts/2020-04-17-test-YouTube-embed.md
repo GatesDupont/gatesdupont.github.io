@@ -1,7 +1,8 @@
 ---
-title: "Test post"
+title: "Test YouTube Embed"
 layout: post
 published: true
+thumbnail: /images/thumbnails/nested_gams.jpg
 use_code: true
 ---
 
