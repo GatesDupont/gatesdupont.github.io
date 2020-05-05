@@ -14,27 +14,27 @@
 }
 
 a, a:link {
-  color: #71b2c9;
+  color: #003658;
   text-decoration: none !important;
 }
 
 a, a:visited {
-  color: #71b2c9;
+  color: #15202B;
   text-decoration: none !important;
 }
 
 a, a:hover{
-  color: #003b5c;
+  color: #15202B;
   text-decoration: none !important;
 }
 
 a, a:active {
-  color: #003b5c;
+  color: #003658;
   text-decoration: none !important;
 }
 
 .cardinal-red {
-  color: #881c1c !important; /* Cardinal Red */
+  color: #15202B !important; /* Cardinal Red */
 }
 
 /* primary color */
