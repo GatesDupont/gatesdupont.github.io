@@ -27,7 +27,11 @@ layout: default
       
         <! ––– DATE –––>
         {%- assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta" style="font-size: 1.25em">{{ post.date | date: date_format }}</span>
+        <span style="color:#737373">
+          <span class="post-meta" style="font-size: 1.25em">
+            {{ post.date | date: date_format }}
+          </span>
+        </span>
 
         <! ––– TITLE –––>
         <h2 style="font-size:3em;"> 
