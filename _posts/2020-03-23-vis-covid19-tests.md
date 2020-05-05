@@ -21,6 +21,8 @@ use_code: true
 This is a quick post to introduce a few useful tips and tricks that are readily available in R to efficiently produce a state-level visualization of reported testing data for COVID-19. The end-goal here, as you can see in Figure 1, is a geo-facetted map showing dialy totals for the cumulative number of tests administered by state. To make it more intuitive, that number is scaled to the number of tests per thousand people. 
 
 
+<br>
+
 ## Setup
 
 First, the packages we need. As usual, we will rely on [`dplyr`](https://dplyr.tidyverse.org/) for efficient data manipulation, and [`ggplot2`](https://ggplot2.tidyverse.org/reference/ggtheme.html) and its extension, [`ggpubr`](https://rpkgs.datanovia.com/ggpubr/), to make plotting a bit easier and more aesthetically pleasing. [`RCurl`](https://www.rdocumentation.org/packages/RCurl/versions/1.98-1.1) is a package that will help us scrape [api data](https://covidtracking.com/api/) of US state testing from [The COVID Tracking Project](https://covidtracking.com/), which we can then compare to data of 2015 state population sizes that are readily available from the [`usmap`](https://www.rdocumentation.org/packages/usmap/versions/0.5.0/topics/usmap) package. Finally, we' will put this all together into a nice facted plot where each facet represents a state, using the package [`geofacet`](https://hafen.github.io/geofacet/). If you are missing any of these packages, they are all available for download from CRAN, so for example, you can use: `install.packages("dplyr")`.
@@ -34,6 +36,8 @@ library(usmap)
 library(geofacet)
 ```
 
+
+<br>
 
 ## Accessing the data
 
@@ -55,6 +59,8 @@ covid19 <- read.csv(text = download)
 
 The COVID-19 data has several fields for each state on each day, including the number of positive, negative, and pending test results, as well as the total number of administered tests and number of reported COVID-19 deaths. 
 
+
+<br>
 
 ## Basic data maniuplation
 
@@ -82,6 +88,9 @@ df = df %>%
   mutate(overall_total = max(perthousand)) %>%
   ungroup()
 ```
+
+
+<br>
 
 ## Final plot
 
