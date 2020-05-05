@@ -24,11 +24,15 @@ Motivation: In reality, landscapes are logistically challenging to sample, and p
 
 Solution: We propose a genetic algorithm to optimize any sensible, criteria-based objective function to produce near-optimal sampling designs.
 
-[6 designs figure]
+<center>
+<img src="https://pbs.twimg.com/media/EV74eRaXkAAgf_K?format=jpg&name=4096x4096" alt="Figure 1: Optimal designs tested" style="width:50vw;">
+</center>
 
 Our approach, implemented in `oSCR`, explicitly incorporates information about a species of interest & logistic constraints, bringing clarity & flexibility to decision-making for SCR design generation.
 
-[Code snippet]
+<center>
+  <img src="https://pbs.twimg.com/media/EV75VOdXsAA51Z_?format=jpg&name=4096x4096" alt="Figure 2: Design generation code" style="width:50vw;">
+</center>
 
 We generated ‘optimal’ designs using the algorithm and evaluated them, via simulation, across a set of realistic constraints, including variation in: effort, study area shape, and density pattern.
 
