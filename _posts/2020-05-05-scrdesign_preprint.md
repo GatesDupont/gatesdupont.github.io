@@ -53,7 +53,7 @@ use_code: true
         <img src="https://pbs.twimg.com/media/EV75VOdXsAA51Z_?format=jpg&name=4096x4096" alt="Figure 2: Design generation code">
 </div>
 <div class="col-12 col-sm-7">
-   <h1 style="font-size:1.5vw;">
+   <h1 style="font-size:20px;">
      <p>Our approach, implemented in `oSCR`, explicitly incorporates information about a species of interest & logistic constraints, bringing clarity & flexibility to decision-making for SCR design generation.</p>  
   </h1>
 </div>
@@ -67,7 +67,7 @@ use_code: true
         <img src="https://pbs.twimg.com/media/EV75P5hXsAAJeQB?format=jpg&name=4096x4096" alt="Figure 3: Examples of tested landscapes">
 </div>
 <div class="col-12 col-sm-7">
-  <h1 style="font-size:1.5vw;">
+  <h1 style="font-size:20px;">
     <p>We generated ‘optimal’ designs using the algorithm and evaluated them, via simulation, across a set of realistic constraints, including variation in: effort, study area shape, and density pattern.</p>  
   </h1>
 </div>
@@ -81,7 +81,7 @@ use_code: true
         <img src="https://pbs.twimg.com/media/EV75ZhqXkAAzKG8?format=jpg&name=4096x4096" alt="Figure 4: Simulation results">
 </div>
 <div class="col-12 col-sm-7">
-  <h1 style="font-size:1.5vw;">
+  <h1 style="font-size:20px;">
     <p>Bottom line: our designs perform as well as existing recommendations, but with far more flexibility to be applied in any landscape, and further, they appear robust to spatial variation in density.</p> 
     <p>We hope that by developing this tool and making it freely available and easy to use, SCR studies will be better designed, allowing researchers, practitioners, and managers to make the most of their resources, and in turn, improve their monitoring efforts!</p>
   </h1>
@@ -93,7 +93,7 @@ use_code: true
 
 <div class="content-row row">
 <div class="col-12 col-sm-7">
-  <h1 style="font-size:1.5vw;">
+  <h1 style="font-size:20px;">
     <p>Download the paper from <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1">bioRxiv</a>, and defintely check out the discussion on Twitter!</p>
   </h1>
 </div>
