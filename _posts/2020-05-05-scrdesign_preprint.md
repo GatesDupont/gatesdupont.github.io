@@ -23,19 +23,23 @@ use_code: true
 
 <br>
 
-<!--- Altmetrics header --->
-<center>
+<!--- Header: altmetrics ---> 
 <div class="content-row row">
+  
   <!--- Text --->
-  <div class="col-11">
+  <div class="col-10">
     <h1 style="font-size:2.25vw;">
      <p>Our preprint on optimal sampling design for SCR is now live!</p>  
     </h1>
   </div>
+  
     <!--- Altmetrics --->
-  <div data-badge-details="right" data-badge-type="donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
+  <div class="col-2">
+    <div data-badge-details="right" data-badge-type="donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
+  </div>
+  
 </div>
-</center>
+
 
 <br>
 
