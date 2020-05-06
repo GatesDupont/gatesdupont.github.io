@@ -5,9 +5,16 @@ published: true
 thumbnail: /images/thumbnails/thumbnail_scrdesign.jpg
 use_code: true
 ---
+<!--- FOR ALTMETRICS --->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
+
+<!--- START CONTENT --->
+
+<!--- Caption --->
 <i>This preprint represents the work from the first chapter of my Master's thesis.</i>
 
+<!--- Banner --->
 <center>
   <div>
     <img src="{{ site.baseurl }}/images/banners/banner_scrdesign.png" style="width:100%;">
@@ -16,11 +23,21 @@ use_code: true
 
 <br>
 
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-<div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
+<!--- Altmetrics header --->
+<div class="row content-row">
+  <!--- Altmetrics --->
+  <div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
+  <!--- Text --->
+  <div class="col-12 col-sm-7">
+    <h1 style="font-size:1.5vw;">
+      <p>Our preprint on optimal sampling design for SCR is now live!</p>  
+     </h1>
+  </div>
+</div>
 
 <br>
 
+<!--- Summary --->
 ## Summary
 
 <br>
