@@ -16,9 +16,9 @@ use_code: true
 
 <br>
 
-<div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="80046171" data-uuid="e07f0a44-0169-9bfe-31fa-408cb0813cc1"><a target="_self" href="https://www.altmetric.com/details.php?domain=biorxiv.altmetric.com&amp;citation_id=80046171" style="display:inline-block;">
-        <img alt="Article has an altmetric score of 25" src="https://badges.altmetric.com/?size=128&amp;score=25&amp;types=tttttttt" width="64px" height="64px" style="border:0; margin:0; max-width: none;">
-</a></div>
+<div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
+
+<br>
 
 ## Summary
 
