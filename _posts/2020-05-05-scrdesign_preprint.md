@@ -54,7 +54,7 @@ use_code: true
 </div>
 <div class="col-12 col-sm-7">
    <h1 style="font-size:20px;">
-     <p>Our approach, implemented in `oSCR`, explicitly incorporates information about a species of interest & logistic constraints, bringing clarity & flexibility to decision-making for SCR design generation.</p>  
+     <p>Our approach, implemented in <a href="https://github.com/jaroyle/oSCR">oSCR</a>, explicitly incorporates information about a species of interest & logistic constraints, bringing clarity & flexibility to decision-making for SCR design generation.</p>  
   </h1>
 </div>
 </div>
