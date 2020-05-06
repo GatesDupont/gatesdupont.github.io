@@ -2,7 +2,7 @@
 title: "Preprint now on bioRxiv: Towards optimal sampling design for SCR"
 layout: post
 published: true
-thumbnail: /images/thumbnails/sl_vis_thumbnail.png
+thumbnail: /images/thumbnails/thumbnail_scrdesign.jpg
 use_code: true
 ---
 
