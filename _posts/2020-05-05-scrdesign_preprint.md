@@ -5,14 +5,13 @@ published: true
 thumbnail: /images/thumbnails/thumbnail_scrdesign.jpg
 use_code: true
 ---
-<!--- FOR ALTMETRICS --->
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-
-
 <!--- START CONTENT --->
 
 <!--- Caption --->
 <i>This preprint represents the work from the first chapter of my Master's thesis.</i>
+
+<!--- FOR ALTMETRICS --->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
 <!--- Banner --->
 <div class="row">
