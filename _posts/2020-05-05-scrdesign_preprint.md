@@ -15,6 +15,17 @@ use_code: true
 <i>This preprint represents the work from the first chapter of my Master's thesis.</i>
 
 <!--- Banner --->
+<div class="row">
+  <!--- Paper title --->
+  <div class="col-10">
+    <img src="{{ site.baseurl }}/images/banners/banner_scrdesign.png" style="width:100%;">
+  </div>
+  <!--- Altmetric --->
+  <div class="col-2">
+    <div data-badge-details="right" data-badge-type="donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
+  </div>
+</div>
+
 <center>
   <div>
     <img src="{{ site.baseurl }}/images/banners/banner_scrdesign.png" style="width:100%;">
