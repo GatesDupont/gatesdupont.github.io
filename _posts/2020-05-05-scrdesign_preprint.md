@@ -110,9 +110,11 @@ use_code: true
     </h1>
   </div>
   <div class="row">
+    <center>
     <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
-            <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png">
+            <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png", width="10%>
         </a>
+    </center>
   </div>
 </div>
 <div class="col-12 col-sm-5">
