@@ -42,10 +42,10 @@ use_code: true
 <br>
 
 <div class="row content-row">
-<div class="col-12 col-sm-4 image-wrapper">
+<div class="col-12 col-sm-5 image-wrapper">
         <img src="https://pbs.twimg.com/media/EV75VOdXsAA51Z_?format=jpg&name=4096x4096" alt="Figure 2: Design generation code">
 </div>
-<div class="col-12 col-sm-8">
+<div class="col-12 col-sm-7">
    <h1 style="font-size:1.5vw;">
      <p>Our approach, implemented in `oSCR`, explicitly incorporates information about a species of interest & logistic constraints, bringing clarity & flexibility to decision-making for SCR design generation.</p>  
   </h1>
@@ -56,10 +56,10 @@ use_code: true
 <br>
 
 <div class="row content-row">
-<div class="col-12 col-sm-4 image-wrapper">
+<div class="col-12 col-sm-5 image-wrapper">
         <img src="https://pbs.twimg.com/media/EV75P5hXsAAJeQB?format=jpg&name=4096x4096" alt="Figure 3: Examples of tested landscapes">
 </div>
-<div class="col-12 col-sm-8">
+<div class="col-12 col-sm-7">
   <h1 style="font-size:1.5vw;">
     <p>We generated ‘optimal’ designs using the algorithm and evaluated them, via simulation, across a set of realistic constraints, including variation in: effort, study area shape, and density pattern.</p>  
   </h1>
@@ -70,10 +70,10 @@ use_code: true
 <br>
 
 <div class="row content-row">
-<div class="col-12 col-sm-4 image-wrapper">
+<div class="col-12 col-sm-5 image-wrapper">
         <img src="https://pbs.twimg.com/media/EV75ZhqXkAAzKG8?format=jpg&name=4096x4096" alt="Figure 4: Simulation results">
 </div>
-<div class="col-12 col-sm-8">
+<div class="col-12 col-sm-7">
   <h1 style="font-size:1.5vw;">
     <p>Bottom line: our designs perform as well as existing recommendations, but with far more flexibility to be applied in any landscape, and further, they appear robust to spatial variation in density.</p> 
     <p>We hope that by developing this tool and making it freely available and easy to use, SCR studies will be better designed, allowing researchers, practitioners, and managers to make the most of their resources, and in turn, improve their monitoring efforts!</p>
@@ -85,15 +85,14 @@ use_code: true
 <br>
 
 <div class="content-row row">
-<div class="col-12 col-sm-8 image-wrapper">
+<div class="col-12 col-sm-7">
   <h1 style="font-size:1.5vw;">
     <p>Defintely check it out on Twitter! Download the paper at bioRxiv: <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1">https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1</a></p>
   </h1>
 </div>
-<div class="col-12 col-sm-4">
+<div class="col-12 col-sm-5">
   <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our preprint on <a href="https://twitter.com/hashtag/scrdesign?src=hash&amp;ref_src=twsrc%5Etfw">#scrdesign</a> is live! [a thread, 1/n]<br><br>&quot;Towards optimal sampling design for spatial capture-recapture&quot; <br>Myself, Andy Royle (<a href="https://twitter.com/andyroyle_pwrc?ref_src=twsrc%5Etfw">@andyroyle_pwrc</a>), Ali Nawaz, &amp; Chris Sutherland (<a href="https://twitter.com/chrissuthy?ref_src=twsrc%5Etfw">@chrissuthy</a>), with support from <a href="https://twitter.com/snowleopards?ref_src=twsrc%5Etfw">@snowleopards</a>, <a href="https://twitter.com/PantheraCats?ref_src=twsrc%5Etfw">@PantheraCats</a> <a href="https://t.co/ouxUECODWa">https://t.co/ouxUECODWa</a></p>&mdash; Gates Dupont (@gatesdupont) <a href="https://twitter.com/gatesdupont/status/1251870793346285573?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
-<hr>
 
 
