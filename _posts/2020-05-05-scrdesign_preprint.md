@@ -16,6 +16,7 @@ use_code: true
 
 <br>
 
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 <div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
 
 <br>
