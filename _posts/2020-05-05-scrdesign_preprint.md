@@ -23,7 +23,7 @@ use_code: true
       <img src="https://pbs.twimg.com/media/EV74eRaXkAAgf_K?format=jpg&name=4096x4096" alt="Figure 1: Optimal designs tested">
 </div>
 <div class="col-12 col-sm-8">
-  <h1 style="font-size:20vw;">
+  <h1 style="font-size:2vw;">
     <p>Our preprint on optimal sampling design for SCR is now live!</p>
     <p>Motivation: In reality, landscapes are logistically challenging to sample, and pre-existing design heuristics don't easily apply.</p>
     <p>Solution: We propose a genetic algorithm to optimize any sensible, criteria-based objective function to produce near-optimal sampling designs.</p>  
