@@ -31,6 +31,20 @@ use_code: true
 
 <div class="row content-row">
 <div class="col-12 col-sm-5 image-wrapper">
+      <img src="{{ site.baseurl }}/images/Designs.jpg" alt="Basic (2sigma) SCR design">
+</div>
+<div class="col-12 col-sm-7">
+  <h1 style="font-size:1.5vw;">
+    <p>Spatial capture-recapture (SCR) has emerged as the industry standard to estimate animal density. The precision of such estimates is dependent fundamentally on the sampling design, but despite this knowledge, SCR design remains poorly understood.</p>  
+   </h1>
+</div>
+</div>
+<hr>
+
+<br>
+
+<div class="row content-row">
+<div class="col-12 col-sm-5 image-wrapper">
       <img src="https://pbs.twimg.com/media/EV74eRaXkAAgf_K?format=jpg&name=4096x4096" alt="Figure 1: Optimal designs tested">
 </div>
 <div class="col-12 col-sm-7">
