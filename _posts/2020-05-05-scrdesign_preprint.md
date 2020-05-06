@@ -86,7 +86,7 @@ use_code: true
 <div class="row content-row">
 <div class="col-12 col-sm-4 image-wrapper">
   <h1 style="font-size:1.5vw;">
-    <p>Defintely check it out on Twitter!</p>
+    <p>Defintely check it out on Twitter! Download the paper at bioRxiv: <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1">https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1</a></p>
   </h1>
 </div>
 <div class="col-12 col-sm-8">
