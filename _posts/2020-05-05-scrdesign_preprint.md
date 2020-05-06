@@ -103,13 +103,19 @@ use_code: true
 
 <div class="content-row row">
 <div class="col-12 col-sm-7">
-  <h1 style="font-size:20px;">
-    <p>Download the paper from <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1">bioRxiv</a>, and defintely check out the discussion on Twitter!</p>
-  </h1>
+  <div class="row">
+    <h1 style="font-size:20px;">
+      <p>Download the paper from <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1">bioRxiv</a>, and defintely check out the discussion on Twitter!</p>
+      <p>Many thanks to Panthera for their support!</p>
+    </h1>
+  </div>
+  <div class="row">
+    <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
+            <img src="{{ site.baseurl }}/images/collabs/panthera.png">
+        </a>
+  </div>
 </div>
 <div class="col-12 col-sm-5">
   <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our preprint on <a href="https://twitter.com/hashtag/scrdesign?src=hash&amp;ref_src=twsrc%5Etfw">#scrdesign</a> is live! [a thread, 1/n]<br><br>&quot;Towards optimal sampling design for spatial capture-recapture&quot; <br>Myself, Andy Royle (<a href="https://twitter.com/andyroyle_pwrc?ref_src=twsrc%5Etfw">@andyroyle_pwrc</a>), Ali Nawaz, &amp; Chris Sutherland (<a href="https://twitter.com/chrissuthy?ref_src=twsrc%5Etfw">@chrissuthy</a>), with support from <a href="https://twitter.com/snowleopards?ref_src=twsrc%5Etfw">@snowleopards</a>, <a href="https://twitter.com/PantheraCats?ref_src=twsrc%5Etfw">@PantheraCats</a> <a href="https://t.co/ouxUECODWa">https://t.co/ouxUECODWa</a></p>&mdash; Gates Dupont (@gatesdupont) <a href="https://twitter.com/gatesdupont/status/1251870793346285573?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
-
-
