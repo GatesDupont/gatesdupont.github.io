@@ -111,7 +111,7 @@ use_code: true
   </div>
   <div class="row">
     <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
-            <img src="{{ site.baseurl }}/images/collabs/panthera.png">
+            <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png">
         </a>
   </div>
 </div>
