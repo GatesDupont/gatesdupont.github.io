@@ -111,9 +111,9 @@ use_code: true
   </div>
   <div class="row">
     <center>
-    <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
-            <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png", width="10%">
-        </a>
+      <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
+        <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png" width="10%">
+      </a>
     </center>
   </div>
 </div>
