@@ -10,7 +10,7 @@ use_code: true
 
 <center>
   <div>
-    <img src="{{ site.baseurl }}/images/banners/banner_slVis.png" style="width:100%;">
+    <img src="{{ site.baseurl }}/images/banners/banner_scrdesign.png" style="width:100%;">
   </div>
 </center>
 
