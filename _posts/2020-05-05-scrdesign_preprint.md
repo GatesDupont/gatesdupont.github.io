@@ -16,7 +16,7 @@ use_code: true
 
 <br>
 
-## Towards optimal sampling design for SCR
+## Summary
 
 After lots of time coding & writing, our preprint on optimal sampling design for SCR is now live!
 
@@ -53,6 +53,8 @@ Bottom line: our designs perform as well as existing recommendations, but with f
 <center>
   <img src="https://pbs.twimg.com/media/EV75ZhqXkAAzKG8?format=jpg&name=4096x4096" alt="Figure 4: Simulation results" style="width:25vw;">
 </center>
+
+<br>
 
 We hope that by developing this tool and making it freely available and easy to use, SCR studies will be better designed, allowing researchers, practitioners, and managers to make the most of their resources, and in turn, improve their monitoring efforts!
 
