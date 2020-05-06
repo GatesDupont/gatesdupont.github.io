@@ -26,30 +26,7 @@ use_code: true
   </div>
 </div>
 
-<center>
-  <div>
-    <img src="{{ site.baseurl }}/images/banners/banner_scrdesign.png" style="width:100%;">
-  </div>
-</center>
-
 <br>
-
-<!--- Header: altmetrics ---> 
-<div class="content-row row">
-  
-  <!--- Text --->
-  <div class="col-10">
-    <h1 style="font-size:2.25vw;">
-     <p>Our preprint on optimal sampling design for SCR is now live!</p>  
-    </h1>
-  </div>
-  
-    <!--- Altmetrics --->
-  <div class="col-2">
-    <div data-badge-details="right" data-badge-type="donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
-  </div>
-  
-</div>
 
 <!--- Summary --->
 ## Summary
