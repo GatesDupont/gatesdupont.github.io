@@ -27,8 +27,8 @@ use_code: true
 <center>
 <div class="content-row row">
   <!--- Text --->
-  <div class="col-12 col-sm-7">
-    <h1 style="font-size:1.5vw;">
+  <div class="col-12">
+    <h1 style="font-size:2.25vw;">
      <p>Our preprint on optimal sampling design for SCR is now live!</p>  
     </h1>
   </div>
@@ -50,7 +50,6 @@ use_code: true
 </div>
 <div class="col-12 col-sm-7">
   <h1 style="font-size:1.5vw;">
-    <p>Our preprint on optimal sampling design for SCR is now live!</p>
     <p>Motivation: In reality, landscapes are logistically challenging to sample, and pre-existing design heuristics don't easily apply.</p>
     <p>Solution: We propose a genetic algorithm to optimize any sensible, criteria-based objective function to produce near-optimal sampling designs.</p>  
    </h1>
