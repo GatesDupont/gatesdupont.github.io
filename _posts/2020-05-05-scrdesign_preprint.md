@@ -75,4 +75,9 @@ use_code: true
   </h1>
 </div>
 </div>
+<hr>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our preprint on <a href="https://twitter.com/hashtag/scrdesign?src=hash&amp;ref_src=twsrc%5Etfw">#scrdesign</a> is live! [a thread, 1/n]<br><br>&quot;Towards optimal sampling design for spatial capture-recapture&quot; <br>Myself, Andy Royle (<a href="https://twitter.com/andyroyle_pwrc?ref_src=twsrc%5Etfw">@andyroyle_pwrc</a>), Ali Nawaz, &amp; Chris Sutherland (<a href="https://twitter.com/chrissuthy?ref_src=twsrc%5Etfw">@chrissuthy</a>), with support from <a href="https://twitter.com/snowleopards?ref_src=twsrc%5Etfw">@snowleopards</a>, <a href="https://twitter.com/PantheraCats?ref_src=twsrc%5Etfw">@PantheraCats</a> <a href="https://t.co/ouxUECODWa">https://t.co/ouxUECODWa</a></p>&mdash; Gates Dupont (@gatesdupont) <a href="https://twitter.com/gatesdupont/status/1251870793346285573?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
