@@ -51,9 +51,6 @@ use_code: true
   
 </div>
 
-
-<br>
-
 <!--- Summary --->
 ## Summary
 
