@@ -106,7 +106,7 @@ use_code: true
 <div class="content-row row">
 <div class="col-12 col-sm-7">
   <h1 style="font-size:1.5vw;">
-    <p>Download the paper at<a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1">bioRxiv</a>, and defintely check it out on Twitter!</p>
+    <p>Download the paper from <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1">bioRxiv</a>, and defintely check out the discussion on Twitter!</p>
   </h1>
 </div>
 <div class="col-12 col-sm-5">
