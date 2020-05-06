@@ -5,9 +5,6 @@ published: true
 thumbnail: /images/thumbnails/thumbnail_scrdesign.jpg
 use_code: true
 ---
-<!--- START CONTENT --->
-
-<!--- Caption --->
 <i>This preprint represents the work from the first chapter of my Master's thesis.</i>
 
 <!--- FOR ALTMETRICS --->
