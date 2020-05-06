@@ -27,7 +27,7 @@ use_code: true
 <center>
 <div class="content-row row">
   <!--- Text --->
-  <div class="col-12">
+  <div class="col-11">
     <h1 style="font-size:2.25vw;">
      <p>Our preprint on optimal sampling design for SCR is now live!</p>  
     </h1>
