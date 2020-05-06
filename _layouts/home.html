@@ -30,18 +30,18 @@ layout: default
         <! ––– DATE –––>
         {%- assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" -%}
         <span style="color:#737373">
-          <span class="post-meta" style="font-size: 1.25vw">
+          <span class="post-meta" style="font-size: 20px">
             {{ post.date | date: date_format }}
           </span>
         </span>
 
         <! ––– TITLE –––>
-        <h2 style="font-size:3.25vw;"> 
+        <h2 style="font-size: 35px;"> 
           <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
 
           <! ––– EXCERPT –––>
-        <span style="font-size:1.15vw;"> 
+        <span style="font-size: 25px;"> 
           <span style="color:#737373">
             <span style="font-weight:normal">
               {{ post.excerpt | markdownify | truncatewords: 50 }}
