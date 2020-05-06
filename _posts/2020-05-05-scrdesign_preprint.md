@@ -18,6 +18,8 @@ use_code: true
 
 ## Summary
 
+<br>
+
 <div class="row content-row">
 <div class="col-12 col-sm-4 image-wrapper">
       <img src="https://pbs.twimg.com/media/EV74eRaXkAAgf_K?format=jpg&name=4096x4096" alt="Figure 1: Optimal designs tested">
