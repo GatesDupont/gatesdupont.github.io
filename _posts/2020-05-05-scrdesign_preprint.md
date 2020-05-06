@@ -34,7 +34,7 @@ use_code: true
       <img src="{{ site.baseurl }}/images/Designs.jpg" alt="Basic (2sigma) SCR design">
 </div>
 <div class="col-12 col-sm-7">
-  <h1 style="font-size:1.5vw;">
+  <h1 style="font-size:20px;">
     <p>Spatial capture-recapture (SCR) has emerged as the industry standard to estimate animal density. The precision of such estimates is dependent fundamentally on the sampling design, but despite this knowledge, SCR design remains poorly understood.</p>  
    </h1>
 </div>
@@ -48,7 +48,7 @@ use_code: true
       <img src="https://pbs.twimg.com/media/EV74eRaXkAAgf_K?format=jpg&name=4096x4096" alt="Figure 1: Optimal designs tested">
 </div>
 <div class="col-12 col-sm-7">
-  <h1 style="font-size:1.5vw;">
+  <h1 style="font-size:20px;">
     <p>Motivation: In reality, landscapes are logistically challenging to sample, and pre-existing design heuristics don't easily apply.</p>
     <p>Solution: We propose a genetic algorithm to optimize any sensible, criteria-based objective function to produce near-optimal sampling designs.</p>  
    </h1>
