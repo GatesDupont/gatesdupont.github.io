@@ -106,7 +106,7 @@ use_code: true
   <div class="row">
     <h1 style="font-size:20px;">
       <p>Download the paper from <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v1">bioRxiv</a>, and defintely check out the discussion on Twitter!</p>
-      <p>Many thanks to Panthera for their support!</p>
+      <p>Many thanks to Panthera and the Snow Leopard Foundation and for their support!</p>
     </h1>
   </div>
   <div class="row">
