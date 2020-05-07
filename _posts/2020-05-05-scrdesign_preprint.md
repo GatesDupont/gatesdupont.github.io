@@ -111,12 +111,12 @@ use_code: true
   </div>
   <div class="row text-center">
     <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
-      <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png" width="400px">
+      <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png" width="300px">
     </a>
   </div>
   <div class="row text-center">
     <a href = "http://slf.org.pk/" target="_blank">
-      <img src="{{ site.baseurl }}/images/collabs/slf_logo_tight.jpg" width="400px">
+      <img src="{{ site.baseurl }}/images/collabs/slf_logo_tight.jpg" width="300px">
     </a>
   </div>
 </div>
