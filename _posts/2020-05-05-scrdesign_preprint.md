@@ -106,20 +106,20 @@ use_code: true
   <div class="row">
     <h1 style="font-size:20px;">
       <p>Download the paper from <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v2">bioRxiv</a>, and defintely check out the discussion on Twitter!</p>
-      <p>Many thanks to Panthera and the Snow Leopard Foundation and for their support!</p>
+      <p>This work received support from Panthera, the <a href="https://www.pk.undp.org/content/pakistan/en/home/projects/Snow-Leopard-Ecosystem-Protection.html">Pakistan Snow Leopard and Ecosystem Protection Program</a>, and the Snow Leopard Foundation. Thank you!</p>
     </h1>
   </div>
   <div class="row">
     <center>
       <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
-        <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png" width="70%">
+        <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png" width="100px">
       </a>
     </center>
   </div>
   <div class="row">
     <center>
       <a href = "http://slf.org.pk/" target="_blank">
-        <img src="{{ site.baseurl }}/images/collabs/slf_logo_tight.jpg" width="70%">
+        <img src="{{ site.baseurl }}/images/collabs/slf_logo_tight.jpg" width="100px">
       </a>
     </center>
   </div>
