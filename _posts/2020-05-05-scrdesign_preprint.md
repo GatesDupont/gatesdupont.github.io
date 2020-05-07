@@ -109,12 +109,12 @@ use_code: true
       <p>This work received support from Panthera, the <a href="https://www.pk.undp.org/content/pakistan/en/home/projects/Snow-Leopard-Ecosystem-Protection.html">Pakistan Snow Leopard and Ecosystem Protection Program</a>, and the Snow Leopard Foundation. Thank you!</p>
     </h1>
   </div>
-  <div class="row text-center">
+  <div class="row justify-content-md-center">
     <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
       <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png" width="300px">
     </a>
   </div>
-  <div class="row text-center">
+  <div class="row justify-content-md-center">
     <a href = "http://slf.org.pk/" target="_blank">
       <img src="{{ site.baseurl }}/images/collabs/slf_logo_tight.jpg" width="300px">
     </a>
