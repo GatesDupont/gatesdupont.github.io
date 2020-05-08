@@ -1,5 +1,5 @@
 ---
-title: Curriculum Vitae
+title: Curriculum vitae
 layout: default
 use_fontawesome: true
 ---
