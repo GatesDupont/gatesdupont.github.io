@@ -6,6 +6,22 @@ use_fontawesome: true
 
 <!-- Research -->
 
+
+<div class="row content-row">
+<div class="col-12 col-sm-4 image-wrapper">
+    <img src="{{ site.baseurl }}images/thumbnails/thumbnail_scrdesign.jpg">
+</div>
+<div class="col-12 col-sm-8">
+    <h4>Towards optimal sampling design for spatial capture-recapture</h4>
+    <p>Gates Dupont, Andy Royle, Ali Nawaz, Chris Sutherland</p>
+    <p class="italic">Fall 2019 - Spring 2020</p>
+    <p><span class="bold">Abstract:</span> Spatial capture-recapture (SCR) has emerged as the industry standard for analyzing observational data to estimate population size by leveraging information from spatial locations of repeat encounters of individuals. The resulting precision of density estimates depends fundamentally on the number and spatial configuration of traps. Despite this knowledge, existing sampling design recommendations are heuristic and their performance remains untested for most practical applications - i.e., spatially-structured and logistically challenging landscapes. To address this issue, we propose a genetic algorithm that minimizes any sensible, criteria-based objective function to produce near-optimal sampling designs. To motivate the idea of optimality, we compare the performance of designs optimized using two model-based criteria related to the probability of capture. We use simulation to show that these designs out-perform those based on existing recommendations in terms of bias, precision, and accuracy in the estimation of population size. Our approach allows conservation practitioners and researchers to generate customized sampling designs that can improve monitoring of wildlife populations.</p>
+    <p><span class="bold">Presentations:</span>virtual International Statistical Ecology Conference (June) 2020</p>
+    <p><span class="bold">In Review:</span><i>Ecology</i></p>
+</div>
+</div>
+<hr>
+
 <div class="row content-row">
 <div class="col-12 col-sm-4 image-wrapper">
     <img src="{{ site.baseurl }}/attachments/dupont_wnv_poster.png">
