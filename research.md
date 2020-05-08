@@ -8,7 +8,7 @@ use_fontawesome: true
 
 <div class="row content-row">
 <div class="col-12 col-sm-4 image-wrapper">
-    <img src="{{ site.baseurl }}/images/wnv-nj.png">
+    <img src="{{ site.baseurl }}/attachments/dupont_wnv_poster.png">
 </div>
 <div class="col-12 col-sm-8">
     <h4>Recent avian population dynamics in the Northeastern United States suggest persistent but diminished impacts of West Nile virus</h4>
