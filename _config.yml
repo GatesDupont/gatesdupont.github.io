@@ -8,10 +8,10 @@ highlighter: rouge
 # default links by defining a `site.header_paths` array:
 header_paths:
 - about.md
-# - experience.md
-# - projects.md
+- research.md
 - cv.md
-# - research.md
+# - experience.md
+
 
 ##### BUILD SETTINGS #####
 # incremental: true
