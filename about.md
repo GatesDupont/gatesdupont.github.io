@@ -6,6 +6,7 @@ layout: default
 <div class="row content-row">
 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
     <img width="100%" height="70vh" src="{{ site.baseurl }}/images/utah.jpg">
+    <h1 style="font-size:10px;">This isn't my dog. That one back there isn't either. But both were great; 10/10 would pet again.</h1>
 </div>
 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
     <h3>Graduate studies</h3>
