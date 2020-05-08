@@ -18,7 +18,7 @@ use_fontawesome: true
             <p class="italic">Fall 2019 - Spring 2020</p>
         </div>
         <div class="col-2">
-            <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
+            <div data-badge-popover="bottom" data-badge-type="donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
         </div>
     </div>
     <p><span class="bold">Abstract:</span> Spatial capture-recapture (SCR) has emerged as the industry standard for analyzing observational data to estimate population size by leveraging information from spatial locations of repeat encounters of individuals. The resulting precision of density estimates depends fundamentally on the number and spatial configuration of traps. Despite this knowledge, existing sampling design recommendations are heuristic and their performance remains untested for most practical applications - i.e., spatially-structured and logistically challenging landscapes. To address this issue, we propose a genetic algorithm that minimizes any sensible, criteria-based objective function to produce near-optimal sampling designs. To motivate the idea of optimality, we compare the performance of designs optimized using two model-based criteria related to the probability of capture. We use simulation to show that these designs out-perform those based on existing recommendations in terms of bias, precision, and accuracy in the estimation of population size. Our approach allows conservation practitioners and researchers to generate customized sampling designs that can improve monitoring of wildlife populations.</p>
