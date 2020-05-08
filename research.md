@@ -13,7 +13,7 @@ use_fontawesome: true
             <img src="{{ site.baseurl }}images/thumbnails/thumbnail_scrdesign.jpg">
         </div>
         <div class="col-4">
-            <div data-badge-details="right" data-badge-type="donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
+            <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
         </div>
     </div>
 </div>
