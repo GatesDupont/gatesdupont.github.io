@@ -22,12 +22,12 @@ use_fontawesome: true
     <div class="row justify-content-md-center">
       <div>
         <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
-          <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png" width="100px">
+          <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png" width="200px">
         </a>
       </div>
       <div>
         <a href = "http://slf.org.pk/" target="_blank">
-          <img src="{{ site.baseurl }}/images/collabs/slf_logo_tight.jpg" width="100px">
+          <img src="{{ site.baseurl }}/images/collabs/slf_logo_tight.jpg" width="200px">
         </a>
       </div>
     </div>
