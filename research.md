@@ -19,6 +19,18 @@ use_fontawesome: true
     <p><span class="bold">Presentations:</span> virtual International Statistical Ecology Conference (June) 2020</p>
     <p>Preprint available on <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v2">bioRxiv</a></p>
     <p><span class="bold">In Review:</span> <i>Ecology</i></p>
+    
+  <div class="col justify-content-md-center">
+    <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
+      <img src="{{ site.baseurl }}/images/collabs/panthera_tight.png" width="100px">
+    </a>
+  </div>
+  <div class="col justify-content-md-center">
+    <a href = "http://slf.org.pk/" target="_blank">
+      <img src="{{ site.baseurl }}/images/collabs/slf_logo_tight.jpg" width="100px">
+    </a>
+  </div>
+  
 </div>
 </div>
 <hr>
