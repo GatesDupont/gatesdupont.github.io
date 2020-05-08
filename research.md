@@ -6,10 +6,16 @@ use_fontawesome: true
 
 <!-- Research -->
 
-
 <div class="row content-row">
 <div class="col-12 col-sm-4 image-wrapper">
-    <img src="{{ site.baseurl }}images/thumbnails/thumbnail_scrdesign.jpg">
+    <div class="row">
+        <div class="col-8">
+            <img src="{{ site.baseurl }}images/thumbnails/thumbnail_scrdesign.jpg">
+        </div>
+        <div class="col-4">
+            <div data-badge-details="right" data-badge-type="donut" data-doi="10.1101/2020.04.16.045740" class="altmetric-embed"></div>
+        </div>
+    </div>
 </div>
 <div class="col-12 col-sm-8">
     <h4>Towards optimal sampling design for spatial capture-recapture</h4>
@@ -17,7 +23,7 @@ use_fontawesome: true
     <p class="italic">Fall 2019 - Spring 2020</p>
     <p><span class="bold">Abstract:</span> Spatial capture-recapture (SCR) has emerged as the industry standard for analyzing observational data to estimate population size by leveraging information from spatial locations of repeat encounters of individuals. The resulting precision of density estimates depends fundamentally on the number and spatial configuration of traps. Despite this knowledge, existing sampling design recommendations are heuristic and their performance remains untested for most practical applications - i.e., spatially-structured and logistically challenging landscapes. To address this issue, we propose a genetic algorithm that minimizes any sensible, criteria-based objective function to produce near-optimal sampling designs. To motivate the idea of optimality, we compare the performance of designs optimized using two model-based criteria related to the probability of capture. We use simulation to show that these designs out-perform those based on existing recommendations in terms of bias, precision, and accuracy in the estimation of population size. Our approach allows conservation practitioners and researchers to generate customized sampling designs that can improve monitoring of wildlife populations.</p>
     <p><span class="bold">Presentations:</span> virtual International Statistical Ecology Conference (June) 2020</p>
-    <p><span class="bold">Preprint:</span> available on <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v2">bioRxiv</a></p>
+    <p><span class="bold">Preprint:</span> Available on <a href="https://www.biorxiv.org/content/10.1101/2020.04.16.045740v2">bioRxiv</a></p>
     <p><span class="bold">In Review:</span> <i>Ecology</i></p>
     <div class="row justify-content-md-center">
       <div>
@@ -62,4 +68,7 @@ use_fontawesome: true
     <p><span class="bold">Presentations:</span> Time, Space & Narrative in Medieval Icelandic Literature - University of Reykjavik, Iceland 2017</p>
 </div>
 </div>
+
+<!--- FOR ALTMETRICS --->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
