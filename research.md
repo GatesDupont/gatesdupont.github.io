@@ -54,8 +54,8 @@ use_fontawesome: true
     <p><i>Motivation</i> - Many camera traps surveys have been carried out over the last decade, yet, published densities have inherent issues that make them difficult to compare. We are attempting to compile a database of jaguar camera trap survey datasets for joint analysis using spatial capture-recapture (SCR) methods, an approach that allows investigation of a range of spatial ecological processes.</p>
     <p><i>Potential</i> - Integrated analysis of a large number of datasets can be used to provide improved estimates of local and study-specific density, as well as better informed inferences about environmental and anthropogenic drivers of jaguar spatial ecology. Ultimately, we seek to provide the most precise estimates of global jaguar population size and trends and how these vary across the range.</p>
     <p><i>Network</i> - We will adopt an inclusive approach to research and data sharing. We are looking to collaborate directly with the people who collected the data to develop a co-produced understanding of jaguar spatial ecology across the entire range.</p>    
-    <p><span class="bold">More information:</span> <a href="http://www.jagsmap.org">www.jagsmap.org</a></p>
     <p><span class="bold">Collaborators:</span> Mathias Tobler, Chris Sutherland, Andy Royle, Gates Dupont</p>
+    <p><span class="bold">More information:</span> <a href="http://www.jagsmap.org">www.jagsmap.org</a></p>
     <div class="row justify-content-md-center">
       <div>
         <a href = "https://institute.sandiegozoo.org/population-sustainability" target="_blank">
