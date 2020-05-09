@@ -48,7 +48,7 @@ use_fontawesome: true
     <img src="http://www.jagsmap.org/images/jagsmap_navbar.png">
 </div>
 <div class="col-12 col-sm-8">
-    <h4>Jaguars At the Global Scale <i>a Meta-Analysis of the Population</i></h4>
+    <h4>Jaguars At the Global Scale: <i>a Meta-Analysis of the Population</i></h4>
     <p class="italic">June 2019 - Present</p>
     <p><b>The primary objective of JAGSMAP is to develop a data-sharing platform that brings together a range-wide, trans-boundary network of Jaguar biologists to address important challenges in jaguar conservation.</b></p>
     <p><i>Motivation</i> - Many camera traps surveys have been carried out over the last decade, yet, published densities have inherent issues that make them difficult to compare. We are attempting to compile a database of jaguar camera trap survey datasets for joint analysis using spatial capture-recapture (SCR) methods, an approach that allows investigation of a range of spatial ecological processes.</p>
