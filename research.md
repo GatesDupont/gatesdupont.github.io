@@ -62,6 +62,7 @@ use_fontawesome: true
           <img src="{{ site.baseurl }}/images/collabs/SDZ.png" width="200px">
         </a>
       </div>
+    </div>
 </div>
 </div>
 <hr>
