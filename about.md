@@ -51,6 +51,16 @@ layout: default
  </div>
  <div class="row justify-content-md-center">
     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+        <a href = "https://www.massaudubon.org/our-conservation-work" target="_blank">
+            <img src="{{ site.baseurl }}/images/collabs/MassAudubon.jpg">
+        </a>
+      </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+        <a href = "http://slf.org.pk/" target="_blank">
+            <img src="{{ site.baseurl }}/images/collabs/slf.png">
+        </a>
+      </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
         <a href = "https://www.mass.gov/orgs/division-of-fisheries-and-wildlife" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/MassWildlife.png">
         </a>
@@ -60,15 +70,4 @@ layout: default
             <img src="{{ site.baseurl }}/images/collabs/CLO.png">
         </a>
       </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
-        <a href = "https://www.massaudubon.org/our-conservation-work" target="_blank">
-            <img src="{{ site.baseurl }}/images/collabs/MassAudubon.png">
-        </a>
-      </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
-        <a href = "http://slf.org.pk/" target="_blank">
-            <img src="{{ site.baseurl }}/images/collabs/slf.png">
-        </a>
-      </div>
-      
 </div>
