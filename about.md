@@ -29,34 +29,47 @@ layout: default
 <h2>Collaborators</h2>
 <hr>
 <div class="row justify-content-md-center">
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
         <a href = "http://gpls.cns.umass.edu/oeb" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/UMass.png">
         </a>
       </div>
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
         <a href = "https://institute.sandiegozoo.org/population-sustainability" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/SDZ.png">
         </a>
       </div>
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
         <a href = "https://www.panthera.org/cat/snow-leopard" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/panthera.png">
         </a>
       </div>
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
         <a href = "https://dnr.cals.cornell.edu/" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/Cornell.png">
         </a>
       </div>
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+ </div>
+ <div class="row justify-content-md-center">
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
         <a href = "https://www.mass.gov/orgs/division-of-fisheries-and-wildlife" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/MassWildlife.png">
         </a>
       </div>
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
         <a href = "https://www.birds.cornell.edu/home/" target="_blank">
             <img src="{{ site.baseurl }}/images/collabs/CLO.png">
         </a>
       </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+        <a href = "https://www.massaudubon.org/our-conservation-work" target="_blank">
+            <img src="{{ site.baseurl }}/images/collabs/MassAudubon.png">
+        </a>
+      </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+        <a href = "http://slf.org.pk/" target="_blank">
+            <img src="{{ site.baseurl }}/images/collabs/slf.png">
+        </a>
+      </div>
+      
 </div>
