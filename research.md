@@ -38,10 +38,34 @@ use_fontawesome: true
         </a>
       </div>
     </div>
-  
 </div>
 </div>
 <hr>
+
+
+<div class="row content-row">
+<div class="col-12 col-sm-4 image-wrapper">
+    <img src="http://www.jagsmap.org/images/jagsmap_navbar.png">
+</div>
+<div class="col-12 col-sm-8">
+    <h4>Jaguars At the Global Scale <i>a Meta-Analysis of the Population</i></h4>
+    <p class="italic">June 2019 - Present</p>
+    <p><b>The primary objective of JAGSMAP is to develop a data-sharing platform that brings together a range-wide, trans-boundary network of Jaguar biologists to address important challenges in jaguar conservation.</b></p>
+    <p><i>Motivation</i> - Many camera traps surveys have been carried out over the last decade, yet, published densities have inherent issues that make them difficult to compare. We are attempting to compile a database of jaguar camera trap survey datasets for joint analysis using spatial capture-recapture (SCR) methods, an approach that allows investigation of a range of spatial ecological processes.</p>
+    <p><i>Potential</i> - Integrated analysis of a large number of datasets can be used to provide improved estimates of local and study-specific density, as well as better informed inferences about environmental and anthropogenic drivers of jaguar spatial ecology. Ultimately, we seek to provide the most precise estimates of global jaguar population size and trends and how these vary across the range.</p>
+    <p><i>Network</i> - We will adopt an inclusive approach to research and data sharing. We are looking to collaborate directly with the people who collected the data to develop a co-produced understanding of jaguar spatial ecology across the entire range.</p>    
+    <p><span class="bold">More information:</span> <a href="http://www.jagsmap.org">www.jagsmap.org</a></p>
+    <p><span class="bold">Collaborators:</span> Mathias Tobler, Chris Sutherland, Andy Royle, Gates Dupont</p>
+    <div class="row justify-content-md-center">
+      <div>
+        <a href = "https://institute.sandiegozoo.org/population-sustainability" target="_blank">
+          <img src="{{ site.baseurl }}/images/collabs/SDZ.png" width="200px">
+        </a>
+      </div>
+</div>
+</div>
+<hr>
+
 
 <div class="row content-row">
 <div class="col-12 col-sm-4 image-wrapper">
@@ -57,6 +81,7 @@ use_fontawesome: true
 </div>
 <hr>
 
+
 <div class="row content-row">
 <div class="col-12 col-sm-4 image-wrapper">
     <img src="{{ site.baseurl }}/images/fulmar.jpg">
@@ -69,6 +94,7 @@ use_fontawesome: true
     <p><span class="bold">Presentations:</span> Time, Space & Narrative in Medieval Icelandic Literature - University of Reykjavik, Iceland 2017</p>
 </div>
 </div>
+
 
 <!--- FOR ALTMETRICS --->
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
