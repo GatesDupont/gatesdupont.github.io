@@ -52,7 +52,7 @@ To access the COVID-19 API data, we will need to use the `getURL()` function, wh
 
 ```r
 # Get testing data from covid19 tracking
-URL <- "https://covidtracking.com/api/states/daily.csv"
+URL <- "https://covidtracking.com/api/v1/states/daily.csv"
 download <- getURL(URL)
 covid19 <- read.csv(text = download)
 ```
