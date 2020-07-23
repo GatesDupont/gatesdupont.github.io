@@ -12,7 +12,7 @@ layout: default
     <h3>Graduate studies</h3>
     <p>I'm a Master’s student in Dr. Chris Sutherland’s lab at UMass Amherst, with a research focus in quantitative methods for spatial population ecology.</p>
     <p>Generally, I’m interested in using and developing new ecological sampling and modeling methods to inform biological conservation at broad spatial scales. More specifically, I aim to understand species-specific responses to anthropogenic stressors by estimating and forecasting spatially-explicit demographic and movement processes.</p>
-    <p>In the past couple of months, I submitted the first chapter of my thesis, which is on optimal sampling design for spatial capture-recapture (SCR) with the intent to standardize range-wide population monitoring for snow leopards and jaguars. For my second chapter, I’ll be integrating fine-scale animal movement data into SCR methods, paired with hidden Markov models to describe spatial-ecological responses of a species along an urbanization gradient.</p>
+    <p>In the past couple of months, I submitted the first chapter of my thesis, which is on optimal sampling design for spatial capture-recapture (SCR) with the intent to standardize range-wide population monitoring for snow leopards and jaguars. For my second chapter, I’ll be integrating fine-scale animal movement data into SCR methods, paired with hidden Markov models to describe mechanisms of spatial-ecological responses of a species along an urbanization gradient.</p>
 </div>
 <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
     <a class="twitter-timeline" 
