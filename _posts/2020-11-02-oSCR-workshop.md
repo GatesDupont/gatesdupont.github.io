@@ -11,7 +11,7 @@ use_code: true
 <h3> Lecture slides: </h3>
 
 <div class="col-12 col-sm-5 image-wrapper">
-        <iframe width="300px" src="https://docs.google.com/gview?url=docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzcGF0aWFsY2FwdHVyZXJlY2FwdHVyZXxneDo3OWVkMGQ1ZWUwMWY3YjQ4&embedded=true" frameborder="0"></iframe>
+        <iframe width="500px" src="https://docs.google.com/gview?url=docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzcGF0aWFsY2FwdHVyZXJlY2FwdHVyZXxneDo3OWVkMGQ1ZWUwMWY3YjQ4&embedded=true" frameborder="0"></iframe>
 </div>
 
 
@@ -21,5 +21,5 @@ use_code: true
 <h3> Lecture recording: </h3>
 
 <div class="col-12 col-sm-5 image-wrapper">
-        <iframe width="300px" src="https://www.youtube.com/embed/wX0uIolgo38" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="500px" src="https://www.youtube.com/embed/wX0uIolgo38" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
