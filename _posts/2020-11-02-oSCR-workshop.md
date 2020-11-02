@@ -6,6 +6,8 @@ thumbnail: /images/thumbnails/oscr_hex.png
 use_code: true
 ---
 
+<i>Materials available from my lecture on design during our workshop on SCR and oSCR.</i>
+
 Lecture slides:
 
 <iframe src="https://docs.google.com/gview?url=docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzcGF0aWFsY2FwdHVyZXJlY2FwdHVyZXxneDo3OWVkMGQ1ZWUwMWY3YjQ4&embedded=true" style="width:60%; height:60%;" frameborder="0"></iframe>
