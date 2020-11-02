@@ -10,7 +10,7 @@ use_code: true
 
 Lecture slides:
 
-<iframe src="https://docs.google.com/gview?url=docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzcGF0aWFsY2FwdHVyZXJlY2FwdHVyZXxneDo3OWVkMGQ1ZWUwMWY3YjQ4&embedded=true" style="width:60%; height:60%;" frameborder="0"></iframe>
+<iframe width="560" height="315" src="https://docs.google.com/gview?url=docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzcGF0aWFsY2FwdHVyZXJlY2FwdHVyZXxneDo3OWVkMGQ1ZWUwMWY3YjQ4&embedded=true" frameborder="0"></iframe>
 
 <a href="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzcGF0aWFsY2FwdHVyZXJlY2FwdHVyZXxneDo3OWVkMGQ1ZWUwMWY3YjQ4">Download slides</a>
 
