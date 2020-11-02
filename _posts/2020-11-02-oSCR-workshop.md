@@ -10,9 +10,9 @@ use_code: true
 
 <h3> Lecture slides: </h3>
 
-<iframe width="560" height="315" src="https://docs.google.com/gview?url=docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzcGF0aWFsY2FwdHVyZXJlY2FwdHVyZXxneDo3OWVkMGQ1ZWUwMWY3YjQ4&embedded=true" frameborder="0"></iframe>
+<iframe style="width:100%; height:100%;" src="https://docs.google.com/gview?url=docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzcGF0aWFsY2FwdHVyZXJlY2FwdHVyZXxneDo3OWVkMGQ1ZWUwMWY3YjQ4&embedded=true" frameborder="0"></iframe>
 
 <a href="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzcGF0aWFsY2FwdHVyZXJlY2FwdHVyZXxneDo3OWVkMGQ1ZWUwMWY3YjQ4">Download slides</a>
 
 <h3> Lecture recording: </h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wX0uIolgo38" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="width:100%; height:100%;" src="https://www.youtube.com/embed/wX0uIolgo38" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
