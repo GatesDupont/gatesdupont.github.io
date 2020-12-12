@@ -9,6 +9,7 @@ use_fontawesome: true
 <p>(Invited contribution to special issue, in prep.) Dupont, G., Linden, D., Sutherland, C. 2021. On the integration of an explicit movement model with spatial capture-recapture for improved inferences about landscape connectivity. Ecology. (Special issue: "Animal movement and spatial capture-recapture: finding an integrated path")</p>
 <br>
 </div>
+<hr>
 <!-- Research -->
 
 <div class="row content-row">
