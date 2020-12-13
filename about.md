@@ -27,8 +27,8 @@ layout: default
 <br>  
 <h2>Publications</h2>
 <hr>
-<p><b>Dupont, G.</b>, Royle, J. A., Nawaz, M. A., Sutherland, C. 2020. Optimal sampling design for spatial capture-recapture. Ecology. Accepted Author Manuscript e03262. https://doi.org/10.1002/ecy.3262</p>
-<p>(Invited contribution to special issue, in prep.) <b>Dupont, G.</b>, Linden, D., Sutherland, C. 2021. On the integration of an explicit movement model with spatial capture-recapture for improved inferences about landscape connectivity. Ecology. (Special issue: "Animal movement and spatial capture-recapture: finding an integrated path")</p>
+<p><b>Dupont, G.</b>, Royle, J. A., Nawaz, M. A., Sutherland, C. 2020. Optimal sampling design for spatial capture-recapture. <i>Ecology</i>. Accepted Author Manuscript e03262. https://doi.org/10.1002/ecy.3262</p>
+<p><i>(Invited contribution to special issue, in prep.)</i> <b>Dupont, G.</b>, Linden, D., Sutherland, C. 2021. On the integration of an explicit movement model with spatial capture-recapture for improved inferences about landscape connectivity. <i>Ecology</i>. (Special issue: "Animal movement and spatial capture-recapture: finding an integrated path")</p>
 <br>
 <h2>Collaborators</h2>
 <hr>
